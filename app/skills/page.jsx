@@ -4,8 +4,8 @@ export default function Skills() {
    return (
       <>
          <Navbar />
-         <div className="flex flex-col items-left justify-center h-screen border-4 border-black rounded-3xl m-12 mt-5 pl-16">
-            <div className="text-6xl pb-4">Skillset</div>
+         <div className="flex flex-col items-left justify-center h-full border-4 border-black rounded-3xl m-12 mt-5 p-20">
+            <div className="text-6xl flex items-center mb-6">Skillset</div>
             <div>
                <div className="text-2xl pb-2">
                   <span className="font-bold">Languages:</span> HTML,
