@@ -3,7 +3,7 @@ import "../public/poppy2.png"
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Navbar/>
       <div className="flex flex-row items-center justify-center h-screen border-4 border-black rounded-3xl m-12 mt-5">
         <div className="flex-col justify-center items-center w-3/5">
@@ -14,6 +14,6 @@ export default function Home() {
           <img src="/poppy2.png" alt="poppy in a field" className="w-5/6"/>
         </div>
       </div>
-    </main>
+    </>
   )
 }
