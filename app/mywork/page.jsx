@@ -28,7 +28,7 @@ export default function MyWork() {
                         </button>
                      </div>
                   </div>
-                  <div className="flex justify-center items-center h-full bg-custom-dark-tan rounded-bl-3xl p-14">
+                  <div className="flex justify-center items-center h-full bg-custom-dark-tan rounded-bl-2xl p-14">
                      <div className="w-3/4 p-4 text-5xl">
                         Sellem Sitters
                         <p className="text-xl">Cat-sitting tracker app</p>
