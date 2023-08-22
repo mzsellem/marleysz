@@ -19,3 +19,15 @@
 /* body {
 
 } */
+
+.bg-custom {
+  background-color: #eee4d8;
+}
+
+.bg-custom-red {
+  background-color:#e00700
+}
+
+.bg-custom-tan {
+  background-color: #e9d7bd
+}
