@@ -15,11 +15,16 @@ export default function MyWork() {
                         </p>
                         <button className="bg-black text-white text-xl rounded-lg p-2">
                            {" "}
-                           Play
+                           <a href="https://mzsellem-ga.github.io/concentration-memory-game/">
+                              Play
+                           </a>
                         </button>
                         <button className="bg-black text-white text-xl rounded-lg p-2 ml-4">
                            {" "}
-                           Github Repo
+                           <a href="https://github.com/mzsellem-GA/concentration-memory-game">
+                              {" "}
+                              Github Repo
+                           </a>
                         </button>
                      </div>
                   </div>
@@ -29,11 +34,13 @@ export default function MyWork() {
                         <p className="text-xl">Cat-sitting tracker app</p>
                         <button className="bg-black text-white text-xl rounded-lg p-2">
                            {" "}
-                           Play
+                           <a href="https://sellemsitters.fly.dev/">App</a>
                         </button>
                         <button className="bg-black text-white text-xl rounded-lg p-2 ml-4">
                            {" "}
-                           Github Repo
+                           <a href="https://github.com/mzsellem-GA/cat-sitting-tracker">
+                              Github Repo
+                           </a>
                         </button>
                      </div>
                   </div>
@@ -49,11 +56,13 @@ export default function MyWork() {
                         </p>
                         <button className="bg-black text-white text-xl rounded-lg p-2">
                            {" "}
-                           Play
+                           <a href="https://soundify-ahje.onrender.com/">App</a>
                         </button>
                         <button className="bg-black text-white text-xl rounded-lg p-2 ml-4">
                            {" "}
-                           Github Repo
+                           <a href="https://github.com/mzsellem-GA/Soundify">
+                              Github Repo
+                           </a>
                         </button>
                      </div>
                   </div>
@@ -65,11 +74,13 @@ export default function MyWork() {
                         </p>
                         <button className="bg-black text-white text-xl rounded-lg p-2">
                            {" "}
-                           Play
+                           <a href="https://lamadoro.onrender.com">App</a>
                         </button>
                         <button className="bg-black text-white text-xl rounded-lg p-2 ml-4">
                            {" "}
-                           Github Repo
+                           <a href="https://github.com/mzsellem-GA/lamadoro">
+                              Github Repo
+                           </a>
                         </button>
                      </div>
                   </div>
