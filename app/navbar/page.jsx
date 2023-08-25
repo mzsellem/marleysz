@@ -8,9 +8,9 @@ export default function Navbar() {
                </a>
                <a
                   className="hover:underline mx-4 underline-offset-4"
-                  href="/about"
+                  href="/mywork"
                >
-                  About
+                  My Work
                </a>
                <a
                   className="hover:underline mx-4 underline-offset-4"
@@ -20,9 +20,9 @@ export default function Navbar() {
                </a>
                <a
                   className="hover:underline mx-4 underline-offset-4"
-                  href="/mywork"
+                  href="/about"
                >
-                  My Work
+                  About
                </a>
                <a
                   className="hover:underline mx-4 underline-offset-4"
