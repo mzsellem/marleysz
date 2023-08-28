@@ -14,6 +14,9 @@ export default function Home() {
           <img src="/poppy2.png" alt="poppy in a field" className="w-5/6"/>
         </div>
       </div>
+
+      
+
     </>
   )
 }

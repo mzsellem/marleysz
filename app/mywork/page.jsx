@@ -16,7 +16,7 @@ export default function MyWork() {
                         <button className="bg-black text-white text-xl rounded-lg p-2">
                            {" "}
                            <a href="https://mzsellem-ga.github.io/concentration-memory-game/">
-                              Play
+                              App
                            </a>
                         </button>
                         <button className="bg-black text-white text-xl rounded-lg p-2 ml-4">
@@ -26,6 +26,10 @@ export default function MyWork() {
                               Github Repo
                            </a>
                         </button>
+                     </div>
+                     <div>
+                        &#9830; HTML &#9830; CSS &#9830; JavaScript &#9830;
+                        Figma
                      </div>
                   </div>
                   <div className="flex justify-center items-center h-full bg-custom-dark-tan rounded-bl-2xl p-14">
@@ -42,6 +46,10 @@ export default function MyWork() {
                               Github Repo
                            </a>
                         </button>
+                     </div>
+                     <div>
+                        MEN Infrastructure | Bootstrap | EJS | Mongoose | Google
+                        OAuth | Passport
                      </div>
                   </div>
                </div>
@@ -65,6 +73,7 @@ export default function MyWork() {
                            </a>
                         </button>
                      </div>
+                     <div>Python | PostgreSQL | Django | Spotify API</div>
                   </div>
                   <div className="flex justify-center items-center h-full p-8">
                      <div className="w-3/4 p-4 text-5xl">
@@ -83,6 +92,7 @@ export default function MyWork() {
                            </a>
                         </button>
                      </div>
+                     <div> MERN Infrastructure | Bootstrap | Mongoose</div>
                   </div>
                </div>
             </div>
