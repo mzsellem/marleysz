@@ -1,10 +1,8 @@
-import Navbar from "../navbar/page";
 import "../../public/aboutpic.png";
 
 export default function About() {
    return (
       <>
-         <Navbar />
          <div className="flex flex-row justify-left h-full border-4 border-black rounded-3xl m-12 mt-5 p-20">
             <div className="w-1/4">
                <img src="/aboutpic.png" alt="poppy in a field" />

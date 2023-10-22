@@ -1,9 +1,6 @@
-import Navbar from "../navbar/page";
-
 export default function Skills() {
    return (
       <>
-         <Navbar />
          <div className="flex flex-col items-center justify-center h-full border-4 border-black rounded-3xl m-12 mt-5 p-8">
             <div className="w-1/2">
                <div className="text-5xl flex items-center mb-6">Skillset</div>

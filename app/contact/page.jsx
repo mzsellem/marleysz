@@ -1,9 +1,6 @@
-import Navbar from "../navbar/page";
-
 export default function Contact() {
    return (
       <>
-         <Navbar />
          <div className="flex flex-col h-full border-4 border-black rounded-3xl m-12 mt-5">
             <div className="flex justify-center flex-col flex-grow-0.75 bg-custom-dark-tan rounded-tl-2xl rounded-tr-2xl p-20 -space-y-12">
                <p className="flex justify-center text-6xl font-semibold p-20">

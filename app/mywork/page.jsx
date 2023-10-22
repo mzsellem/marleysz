@@ -1,7 +1,5 @@
 "use client";
-import Navbar from "../navbar/page";
 import React from "react";
-import SlidingGallery from "../components/SlidingGallery";
 import "../../public/logo.png";
 
 export default function MyWork() {
@@ -15,8 +13,6 @@ export default function MyWork() {
    ];
    return (
       <>
-         <Navbar />
-         <SlidingGallery slides={slides} />
          <div className="flex flex-col h-full border-black rounded-3xl m-12 mt-5 p-0"></div>
       </>
    );
