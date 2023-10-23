@@ -13,29 +13,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <footer className="flex justify-center">
-          <div className="flex space-x-6 mb-3">
-                <a href="https://github.com/mzsellem-GA">
-                    <img
-                      src="/github-mark.png"
-                      alt="github logo"
-                      width="50"
-                      height="50"
-                    />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/marley-sellem/"
-                    className="mt-2"
-                >
-                    <img
-                      src="/li-logo.png"
-                      alt="linkedin logo"
-                      width="50"
-                      height="50"
-                    />
-                </a>
-          </div>
-        </footer>
       </body>
     </html>
   )

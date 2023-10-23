@@ -19,12 +19,14 @@ export default function Home() {
  };
   return (
     <>
-      <div className=" flex justify-center border m-6 space-x-8">
-        <button onClick={() => scrollToSection("section1")} className="hover:underline">My Work</button>
-        <button onClick={() => scrollToSection("section2")} className="hover:underline">Skills</button>
-        <button onClick={() => scrollToSection("section3")} className="hover:underline">About</button>
-        <button onClick={() => scrollToSection("section4")} className="hover:underline">Contact</button>
-      </div>
+    <div className="sticky top-0 z-10 bg-white shadow-md p-4">
+        <div className=" flex justify-center border space-x-8">
+          <button onClick={() => scrollToSection("section1")} className="hover:underline">My Work</button>
+          <button onClick={() => scrollToSection("section2")} className="hover:underline">Skills</button>
+          <button onClick={() => scrollToSection("section3")} className="hover:underline">About</button>
+          <button onClick={() => scrollToSection("section4")} className="hover:underline">Contact</button>
+        </div>
+    </div>
       <div className="border m-6">
         <div className="flex flex-row items-center justify-center h-full border-4 border-black rounded-3xl m-12 mt-5 p-20">
           <div className="flex-col justify-center items-center w-3/5">
@@ -45,14 +47,11 @@ export default function Home() {
           <div ref={sectionRefs.section3} className="section border">
               <About />
           </div>
-          <div ref={sectionRefs.section3} className="section border">
+          <div ref={sectionRefs.section4} className="section border">
               <Contact />
           </div>
+        </div>
       </div>
-      </div>
-
-      
-
     </>
   )
 }

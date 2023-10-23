@@ -11,6 +11,27 @@ export default function Contact() {
                   marleysellem@gmail.com
                </p>
             </div>
+            <div className="flex justify-center space-x-6 bg-custom-dark-tan pb-2">
+               <a href="https://github.com/mzsellem-GA">
+                  <img
+                     src="/github-mark.png"
+                     alt="github logo"
+                     width="50"
+                     height="50"
+                  />
+               </a>
+               <a
+                  href="https://www.linkedin.com/in/marley-sellem/"
+                  className="mt-2"
+               >
+                  <img
+                     src="/li-logo.png"
+                     alt="linkedin logo"
+                     width="50"
+                     height="50"
+                  />
+               </a>
+            </div>
             <div className="flex flex-row flex-grow-0.25">
                <div className="flex w-5/6 bg-custom-tan rounded-bl-2xl justify-center items-center text-3xl font-medium"></div>
                <div className="flex w-1/6 bg-custom-red rounded-br-2xl p-20"></div>
