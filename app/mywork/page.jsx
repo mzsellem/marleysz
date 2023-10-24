@@ -9,7 +9,7 @@ export default function MyWork() {
    const images = [
       "login.png",
       "account.png",
-      "ready-for-challenge.png",
+      "challenge.png",
       "ai-chatbot.png",
       "analytics.png",
       "feedback.png",
@@ -17,10 +17,10 @@ export default function MyWork() {
    ];
    return (
       <>
-         <ul>Projects</ul>
-         <li>
+         <ul className="text-5xl mb-4">Projects</ul>
+         <li className="list-none">
             <div className="flex flex-col">
-               <h1>AI Chatbot </h1>
+               <h1 className="ml-4 mb-2">AI Chatbot </h1>
                <div className="image-slideshow border flex justify-center">
                   <ImageSlideshow images={images} />
                </div>

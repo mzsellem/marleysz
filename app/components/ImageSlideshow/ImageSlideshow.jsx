@@ -16,7 +16,7 @@ export default function ImageSlideshow({ images }) {
    };
 
    return (
-      <div className="relative">
+      <div className="relative border flex justify-center">
          <img
             src={images[currentImageIndex]}
             alt="Slideshow"
@@ -24,13 +24,13 @@ export default function ImageSlideshow({ images }) {
          />
          <button
             onClick={prevImage}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-8 p-2 bg-gray-800 text-white rounded-full"
          >
             &lt;
          </button>
          <button
             onClick={nextImage}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-8 p-2 bg-gray-800 text-white rounded-full"
          >
             &gt;
          </button>
