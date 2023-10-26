@@ -3,11 +3,11 @@ export default function Intro() {
       <>
          <div className="flex flex-col md:h-full border-4 rounded-3xl p-8">
             <div className="flex flex-col justify-center text-center">
-               <h1 className="text-6xl font-extralight md:text-8xl p-2 underline decoration-4 underline-offset-8">
+               <h1 className="text-6xl font-extralight md:text-8xl m-2 underline decoration-4 underline-offset-8">
                   MARLEY SELLEM
                </h1>
             </div>
-            <div className="mt-4 flex md:flex-col items-center justify-center border">
+            <div className="mt-4 flex md:flex-col items-center justify-center border m-3">
                <div className="text-xl md:text-4xl font-thin text-start">
                   FULL STACK SOFTWARE ENGINEER
                </div>
