@@ -11,7 +11,7 @@ export default function MyWork() {
       "account.png",
       "challenge.png",
       "ai-chatbot.png",
-      "analytics.png",
+      "analytics-edit.png",
       "feedback.png",
       "control-panel.png",
    ];
