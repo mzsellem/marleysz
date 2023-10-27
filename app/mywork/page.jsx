@@ -14,7 +14,8 @@ export default function MyWork() {
    const projects = [
       {
          title: "AI Chatbot",
-         description: "hello",
+         description:
+            "Empower your leadership potential with our cutting-edge leadership development app powered by OpenAI, tailored to enhance your skills, foster innovation, and guide you towards becoming a dynamic and effective leader.",
          images: [
             "login.png",
             "account.png",
@@ -36,7 +37,8 @@ export default function MyWork() {
       },
       {
          title: "Lamadoro",
-         description: "bonjour",
+         description:
+            "Lamadoro, a user-friendly app, leverages the Pomodoro Technique to enhance your productivity by breaking work into manageable intervals, providing rejuvenating breaks, and inspiring you with motivational quotes, ultimately leading to increased productivity and reduced burnout.",
          images: [
             "lamadoro-login.png",
             "lamadoro-home.png",
@@ -45,13 +47,17 @@ export default function MyWork() {
             "lamadoro-timer.png",
          ],
          techLinks: [
-            { name: "Nextjs", link: "https://nextjs.org/" },
-            { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
-            { name: "Supabase", link: "https://supabase.com/" },
-            { name: "Vercel", link: "https://vercel.com/" },
-            { name: "Vercel AI SDK", link: "https://sdk.vercel.ai/docs" },
-            { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
-            { name: "Tailwind UI", link: "https://tailwindui.com/" },
+            { name: "Express", link: "https://expressjs.com/" },
+            { name: "Reactjs", link: "https://react.dev/" },
+            { name: "MongoDB", link: "https://www.mongodb.com/" },
+            { name: "Mongoose", link: "https://mongoosejs.com/docs/" },
+            { name: "Nodejs", link: "https://nodejs.org/en" },
+            { name: "Bootstrap", link: "https://getbootstrap.com/" },
+            {
+               name: "React Bootstrap",
+               link: "https://react-bootstrap.github.io/",
+            },
+            { name: "Figma", link: "https://www.figma.com/" },
          ],
       },
       // { title: "project three", description: "hola" },
