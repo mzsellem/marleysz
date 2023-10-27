@@ -1,6 +1,6 @@
 import ImageSlideshow from "../image-slideshow/image-slideshow";
 
-export default function Project({ images, title, description }) {
+export default function Project({ images, title, description, techLinks }) {
    return (
       <div className="flex flex-col items-center">
          <div className="m-2">{title}</div>
@@ -11,48 +11,15 @@ export default function Project({ images, title, description }) {
             {description}
          </div>
          <div className="space-x-2 mt-2 mb-4 flex flex-wrap justify-center">
-            <a
-               href="https://nextjs.org/"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Nextjs
-            </a>
-            <a
-               href="https://vitejs.dev/guide/"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Vite/Reactjs
-            </a>
-            <a
-               href="https://supabase.com/"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Supabase
-            </a>
-            <a
-               href="https://vercel.com/"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Vercel
-            </a>
-            <a
-               href="https://sdk.vercel.ai/docs"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Vercel AI SDK
-            </a>
-            <a
-               href="https://tailwindcss.com/"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Tailwind CSS
-            </a>
-            <a
-               href="https://tailwindui.com/"
-               className="border rounded-xl p-2 text-sm"
-            >
-               Tailwind UI
-            </a>
+            {techLinks.map((tech, index) => (
+               <a
+                  key={index}
+                  href={tech.link} // Replace "example.com" with the actual link
+                  className="border rounded-xl p-2 text-sm"
+               >
+                  {tech.name}
+               </a>
+            ))}
          </div>
       </div>
    );

@@ -24,6 +24,15 @@ export default function MyWork() {
             "feedback.png",
             "control-panel.png",
          ],
+         techLinks: [
+            { name: "Nextjs", link: "https://nextjs.org/" },
+            { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
+            { name: "Supabase", link: "https://supabase.com/" },
+            { name: "Vercel", link: "https://vercel.com/" },
+            { name: "Vercel AI SDK", link: "https://sdk.vercel.ai/docs" },
+            { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+            { name: "Tailwind UI", link: "https://tailwindui.com/" },
+         ],
       },
       {
          title: "Lamadoro",
@@ -34,6 +43,15 @@ export default function MyWork() {
             "lamadoro-about.png",
             "lamadoro-tasks.png",
             "lamadoro-timer.png",
+         ],
+         techLinks: [
+            { name: "Nextjs", link: "https://nextjs.org/" },
+            { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
+            { name: "Supabase", link: "https://supabase.com/" },
+            { name: "Vercel", link: "https://vercel.com/" },
+            { name: "Vercel AI SDK", link: "https://sdk.vercel.ai/docs" },
+            { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+            { name: "Tailwind UI", link: "https://tailwindui.com/" },
          ],
       },
       // { title: "project three", description: "hola" },
@@ -53,6 +71,7 @@ export default function MyWork() {
                         images={obj.images}
                         title={obj.title}
                         description={obj.description}
+                        techLinks={obj.techLinks}
                      />
                   );
                })}
