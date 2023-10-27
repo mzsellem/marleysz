@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function ImageSlideshow({ images }) {
-   console.log({ images });
    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
    const nextImage = () => {

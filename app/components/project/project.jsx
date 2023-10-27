@@ -1,11 +1,10 @@
 import ImageSlideshow from "../image-slideshow/image-slideshow";
 
 export default function Project({ images, title, description }) {
-   console.log({ images });
    return (
       <div className="flex flex-col items-center">
          <div className="m-2">{title}</div>
-         <div className="image-slideshow flex items-center border bg-white shadow-md mt-2 mb-12">
+         <div className="image-slideshow flex items-center bg-white shadow-md mt-2 mb-12">
             <ImageSlideshow images={images} />
          </div>
          <div className="flex m-2 text-center mt-4 w-3/4 text-sm">

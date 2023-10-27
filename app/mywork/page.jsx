@@ -1,15 +1,19 @@
 "use client";
 import React from "react";
+import Project from "../components/project/project";
 import "../../public/logo.png";
-import ImageSlideshow from "../components/image-slideshow/image-slideshow";
 import "../../public/account.png";
 import "../../public/ai-chatbot.png";
-import Project from "../components/project/project";
+import "../../public/lamadoro-login.png";
+import "../../public/lamadoro-about.png";
+import "../../public/lamadoro-home.png";
+import "../../public/lamadoro-tasks.png";
+import "../../public/lamadoro-timer.png";
 
 export default function MyWork() {
    const projects = [
       {
-         title: "project one",
+         title: "AI Chatbot",
          description: "hello",
          images: [
             "login.png",
@@ -21,11 +25,21 @@ export default function MyWork() {
             "control-panel.png",
          ],
       },
-      { title: "project two", description: "bonjour" },
-      { title: "project three", description: "hola" },
-      { title: "project four", description: "nihao" },
-      { title: "project five", description: "konnichiwa" },
-      { title: "project six", description: "guten tag" },
+      {
+         title: "Lamadoro",
+         description: "bonjour",
+         images: [
+            "lamadoro-login.png",
+            "lamadoro-home.png",
+            "lamadoro-about.png",
+            "lamadoro-tasks.png",
+            "lamadoro-timer.png",
+         ],
+      },
+      // { title: "project three", description: "hola" },
+      // { title: "project four", description: "nihao" a},
+      // { title: "project five", description: "konnichiwa" },
+      // { title: "project six", description: "guten tag" },
    ];
 
    return (
