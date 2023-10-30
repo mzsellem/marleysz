@@ -7,7 +7,7 @@ export default function Project({ images, title, description, techLinks }) {
          <div className="image-slideshow md:flex items-center mt-2 md:mb-8">
             <ImageSlideshow images={images} />
          </div>
-         <div className="flex m-2 text-center text-sm">{description}</div>
+         <div className="flex m-6 text-center text-sm">{description}</div>
          <div className="space-x-2 mt-2 mb-4 flex flex-wrap justify-center">
             {techLinks.map((tech, index) => (
                <a
