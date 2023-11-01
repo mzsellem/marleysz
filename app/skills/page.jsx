@@ -38,10 +38,10 @@ export default function Skills() {
    return (
       <>
          <div className="flex flex-col h-full border-4 border-black rounded-3xl p-6">
-            <div className="w-full flex flex-col items-center border">
+            <div className="w-full flex flex-col items-center p-4 bg-white shadow-md">
                <div className="text-4xl mb-6 mt-4 border">Skillset</div>
                {/* Use flex and flex-wrap to create three rows */}
-               <div className="flex flex-wrap sm:space-x-4">
+               <div className="flex flex-wrap justify-center sm:space-x-4">
                   {skillCats.map((obj) => (
                      <div key={obj.category} className="mb-4">
                         <div className="text-lg border">

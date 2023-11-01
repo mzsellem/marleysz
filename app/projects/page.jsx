@@ -86,20 +86,22 @@ export default function Projects() {
       <>
          <div className="border mx-auto max-w-screen-md">
             <div className="flex flex-col justify-center text-center border">
-               <div className="text-4xl mb-6 mt-4">Projects</div>
-               <div className="space-x-2">
-                  <button
-                     onClick={goToPreviousProject}
-                     className="border-2 p-2 bg-white shadow-md"
-                  >
-                     &larr;
-                  </button>
-                  <button
-                     onClick={goToNextProject}
-                     className="border-2 p-2 bg-white shadow-md"
-                  >
-                     &rarr;
-                  </button>
+               <div className="space-x-2 flex justify-center border mt-4 p-4 flex-col">
+                  <div className="text-4xl mb-6 mt-4">Projects</div>
+                  <div className="space-x-4 flex justify-center">
+                     <button
+                        onClick={goToPreviousProject}
+                        className="border-2 p-2 bg-white shadow-md w-1/5 md:w-1/6"
+                     >
+                        &larr;
+                     </button>
+                     <button
+                        onClick={goToNextProject}
+                        className="border-2 p-2 bg-white shadow-md w-1/5 md:w-1/6"
+                     >
+                        &rarr;
+                     </button>
+                  </div>
                </div>
                <div className="flex flex-row items-center p-4">
                   <div className="w-full bg-white shadow-md">
