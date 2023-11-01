@@ -84,9 +84,9 @@ export default function Projects() {
 
    return (
       <>
-         <div className="border mx-auto max-w-screen-md">
-            <div className="flex flex-col justify-center text-center border">
-               <div className="space-x-2 flex justify-center border mt-4 p-4 flex-col">
+         <div className="border-4 rounded-3xl mx-auto max-w-screen-md">
+            <div className="flex flex-col justify-center text-center">
+               <div className="space-x-2 flex justify-center mt-4 p-4 flex-col">
                   <div className="text-4xl mb-6 mt-4">Projects</div>
                   <div className="space-x-4 flex justify-center">
                      <button

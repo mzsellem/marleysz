@@ -7,7 +7,7 @@ export default function Intro() {
                   MARLEY SELLEM
                </h1>
             </div>
-            <div className="mt-4 flex md:flex-col items-center justify-center border m-3">
+            <div className="mt-4 flex md:flex-col items-center justify-center m-3">
                <div className="text-xl md:text-4xl font-thin text-start">
                   FULL STACK SOFTWARE ENGINEER
                </div>
