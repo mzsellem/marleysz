@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Project from "../components/project/project";
 import "../../public/logo.png";
 import "../../public/account.png";
@@ -66,21 +66,48 @@ export default function Projects() {
       // { title: "project six", description: "guten tag" },
    ];
 
+   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+   const goToPreviousProject = () => {
+      setCurrentProjectIndex((prevIndex) =>
+         prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+      );
+   };
+
+   const goToNextProject = () => {
+      setCurrentProjectIndex((prevIndex) =>
+         prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      );
+   };
+
+   const currentProject = projects[currentProjectIndex];
+
    return (
       <>
-         <div className="flex flex-col justify-center text-center p-6 border overflow-x-auto">
-            <div className="text-4xl mb-6 mt-4">Projects</div>
-            <div className="flex flex-row space-x-14">
-               {projects.map((obj) => {
-                  return (
+         <div className="border">
+            <div className="flex flex-col justify-center text-center border">
+               <div className="text-4xl mb-6 mt-4">Projects</div>
+               <div className="space-x-2">
+                  <button
+                     onClick={goToPreviousProject}
+                     className="border-2 p-2"
+                  >
+                     &larr;
+                  </button>
+                  <button onClick={goToNextProject} className="border-2 p-2">
+                     &rarr;
+                  </button>
+               </div>
+               <div className="flex flex-row items-center p-4">
+                  <div className="w-full">
                      <Project
-                        images={obj.images}
-                        title={obj.title}
-                        description={obj.description}
-                        techLinks={obj.techLinks}
+                        images={currentProject.images}
+                        title={currentProject.title}
+                        description={currentProject.description}
+                        techLinks={currentProject.techLinks}
                      />
-                  );
-               })}
+                  </div>
+               </div>
             </div>
          </div>
       </>

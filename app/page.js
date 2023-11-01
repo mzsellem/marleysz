@@ -31,7 +31,7 @@ export default function Home() {
         </div>
     </div>
       <div className="border m-6">
-        <div className="border">
+        <div className="border space-y-8">
           <div ref={sectionRefs.section1} className="section border">
               <Intro />
           </div>

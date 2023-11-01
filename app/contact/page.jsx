@@ -1,12 +1,12 @@
 export default function Contact() {
    return (
       <>
-         <div className="flex flex-col h-full border-4 border-black rounded-3xl m-12 space-y-6 p-20">
+         <div className="flex flex-col h-full border-4 border-black rounded-3xl space-y-6 p-6">
             <div className="flex justify-center flex-col space-y-6">
-               <p className="flex justify-center text-6xl font-semibold">
+               <p className="flex justify-center text-5xl font-semibold">
                   Let's Chat
                </p>
-               <p className="flex justify-center text-4xl font-fine">
+               <p className="flex justify-center text-xl font-fine">
                   {" "}
                   marleysellem@gmail.com
                </p>
@@ -16,8 +16,8 @@ export default function Contact() {
                   <img
                      src="/github-mark.png"
                      alt="github logo"
-                     width="50"
-                     height="50"
+                     width="40"
+                     height="40"
                   />
                </a>
                <a
@@ -27,8 +27,8 @@ export default function Contact() {
                   <img
                      src="/li-logo.png"
                      alt="linkedin logo"
-                     width="50"
-                     height="50"
+                     width="40"
+                     height="40"
                   />
                </a>
             </div>
