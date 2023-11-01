@@ -68,8 +68,8 @@ export default function Projects() {
 
    return (
       <>
-         <div className="flex flex-col justify-center text-center m-2 border overflow-x-auto">
-            <div className="text-3xl m-2">Projects</div>
+         <div className="flex flex-col justify-center text-center p-6 border overflow-x-auto">
+            <div className="text-4xl mb-6 mt-4">Projects</div>
             <div className="flex flex-row space-x-14">
                {projects.map((obj) => {
                   return (

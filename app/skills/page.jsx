@@ -37,11 +37,11 @@ export default function Skills() {
 
    return (
       <>
-         <div className="flex flex-col justify-center h-full border-4 border-black rounded-3xl">
-            <div className="w-full p-6">
-               <div className="text-5xl mb-6 mt-6">Skillset</div>
+         <div className="flex flex-col h-full border-4 border-black rounded-3xl p-6">
+            <div className="w-full flex flex-col items-center">
+               <div className="text-4xl mb-6 mt-4 border">Skillset</div>
                {/* Use flex and flex-wrap to create three rows */}
-               <div className="flex flex-wrap">
+               <div className="flex flex-wrap md:space-x-4">
                   {skillCats.map((obj) => (
                      <div key={obj.category} className="mb-4">
                         <div className="text-lg border">
@@ -61,11 +61,16 @@ export default function Skills() {
                   ))}
                </div>
 
-               <div className="w-full text-3xl border">
-                  <span className="font-bold">Bonus</span>
+               <div className="w-full text-3xl border flex flex-col text-center mb-6">
+                  <span className="font-bold mb-2">Bonus</span>
                   <div className="text-xl">
-                     <span className="flex font-bold">Spoken Languages:</span>{" "}
-                     French (native) and Japanese
+                     <p className="text-center">
+                        {" "}
+                        <span className="font-bold">
+                           Spoken Languages:
+                        </span>{" "}
+                        &nbsp; French (native) and Japanese
+                     </p>
                   </div>
                </div>
             </div>
