@@ -90,16 +90,19 @@ export default function Projects() {
                <div className="space-x-2">
                   <button
                      onClick={goToPreviousProject}
-                     className="border-2 p-2"
+                     className="border-2 p-2 bg-white shadow-md"
                   >
                      &larr;
                   </button>
-                  <button onClick={goToNextProject} className="border-2 p-2">
+                  <button
+                     onClick={goToNextProject}
+                     className="border-2 p-2 bg-white shadow-md"
+                  >
                      &rarr;
                   </button>
                </div>
-               <div className="flex flex-row items-center p-4 border">
-                  <div className="w-full border">
+               <div className="flex flex-row items-center p-4">
+                  <div className="w-full bg-white shadow-md">
                      <Project
                         images={currentProject.images}
                         title={currentProject.title}
