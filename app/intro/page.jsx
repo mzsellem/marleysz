@@ -8,7 +8,7 @@ export default function Intro() {
                </h1>
             </div>
             <div className="mt-4 flex md:flex-col items-center justify-center m-3">
-               <div className="text-xl md:text-4xl font-thin text-start">
+               <div className="text-xl md:mb-4 md:text-4xl font-thin text-start">
                   FULL STACK SOFTWARE ENGINEER
                </div>
                <div className="flex justify-center">

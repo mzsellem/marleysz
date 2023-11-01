@@ -13,7 +13,7 @@ export default function Project({ images, title, description, techLinks }) {
                <a
                   key={index}
                   href={tech.link} // Replace "example.com" with the actual link
-                  className="border rounded-xl p-2 text-xs"
+                  className="border border-poppyred rounded-xl p-2 text-xs"
                >
                   {tech.name}
                </a>
