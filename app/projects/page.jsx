@@ -84,7 +84,7 @@ export default function Projects() {
 
    return (
       <>
-         <div className="border">
+         <div className="border mx-auto max-w-screen-md">
             <div className="flex flex-col justify-center text-center border">
                <div className="text-4xl mb-6 mt-4">Projects</div>
                <div className="space-x-2">
@@ -98,8 +98,8 @@ export default function Projects() {
                      &rarr;
                   </button>
                </div>
-               <div className="flex flex-row items-center p-4">
-                  <div className="w-full">
+               <div className="flex flex-row items-center p-4 border">
+                  <div className="w-full border">
                      <Project
                         images={currentProject.images}
                         title={currentProject.title}

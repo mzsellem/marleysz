@@ -17,7 +17,6 @@
 } */
 
 .image-slideshow {
-  margin-left: 4%;
   width: 200px; /* Set your desired width */
   height: 150px; /* Set your desired height */
   object-fit: cover; /* Optional: This property ensures the images maintain their aspect ratio and cover the defined dimensions. */
