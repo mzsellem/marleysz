@@ -87,17 +87,17 @@ export default function Projects() {
          <div className="border-4 rounded-3xl mx-auto max-w-screen-md">
             <div className="flex flex-col justify-center text-center">
                <div className="space-x-2 flex justify-center mt-4 p-4 flex-col">
-                  <div className="text-4xl mb-6 mt-4">Projects</div>
                   <div className="space-x-4 flex justify-center">
                      <button
                         onClick={goToPreviousProject}
-                        className="border-2 p-2 bg-white shadow-md w-1/5 md:w-1/6"
+                        className="p-2 w-1/5 md:w-1/6 font-bold transform transition-transform hover:scale-150"
                      >
                         &larr;
                      </button>
+                     <div className="text-4xl mb-6 mt-4">Projects</div>
                      <button
                         onClick={goToNextProject}
-                        className="border-2 p-2 bg-white shadow-md w-1/5 md:w-1/6"
+                        className="p-2 w-1/5 md:w-1/6 font-bold transform transition-transform hover:scale-150"
                      >
                         &rarr;
                      </button>
