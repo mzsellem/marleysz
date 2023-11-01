@@ -10,7 +10,7 @@ import "../../public/lamadoro-home.png";
 import "../../public/lamadoro-tasks.png";
 import "../../public/lamadoro-timer.png";
 
-export default function MyWork() {
+export default function Projects() {
    const projects = [
       {
          title: "AI Chatbot",

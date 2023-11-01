@@ -38,29 +38,29 @@ export default function Skills() {
    return (
       <>
          <div className="flex flex-col justify-center h-full border-4 border-black rounded-3xl">
-            <div className="w-full p-6 overflow-x-auto">
+            <div className="w-full p-6">
                <div className="text-5xl mb-6 mt-6">Skillset</div>
-               <div className="flex flex-row space-x-12 border">
-                  <div className="text-xl flex space-x-8 m-4">
-                     {skillCats.map((obj) => {
-                        return (
-                           <div key={obj.category}>
-                              <h1 className="font-bold">{obj.category}</h1>
-                              <ul className="border">
-                                 {obj.list.map((item) => (
-                                    <li
-                                       key={item}
-                                       className="list-inside list-disc"
-                                    >
-                                       {item}
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        );
-                     })}
-                  </div>
+               {/* Use flex and flex-wrap to create three rows */}
+               <div className="flex flex-wrap">
+                  {skillCats.map((obj) => (
+                     <div key={obj.category} className="mb-4">
+                        <div className="text-lg border">
+                           <h1 className="font-bold">{obj.category}</h1>
+                           <ul className="border">
+                              {obj.list.map((item) => (
+                                 <li
+                                    key={item}
+                                    className="list-inside list-disc"
+                                 >
+                                    {item}
+                                 </li>
+                              ))}
+                           </ul>
+                        </div>
+                     </div>
+                  ))}
                </div>
+
                <div className="w-full text-3xl border">
                   <span className="font-bold">Bonus</span>
                   <div className="text-xl">
