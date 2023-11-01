@@ -14,6 +14,8 @@ module.exports = {
       },
       colors: {
         'poppyred': '#c2100b',
+        'hoverred': '#DD150F',
+        'haywhite': '#eee2d2',
       }
     },
   },
