@@ -3,7 +3,7 @@ import "../../public/aboutpic.png";
 export default function About() {
    return (
       <>
-         <div className="flex flex-col justify-start items-center h-full border-4 rounded-3xl p-6 mx-auto max-w-screen-md">
+         <div className="flex flex-col justify-start items-center h-full border-4 rounded-3xl p-6 mx-auto max-w-screen-md font-mono">
             <div className="w-full sm:w-1/2 justify-center flex">
                <img
                   src="/aboutpic.png"
@@ -12,7 +12,7 @@ export default function About() {
                />
             </div>
             <div className="w-full sm:w-1/2 mt-4 text-center sm:text-center">
-               <div className="text-4xl text-center sm:text-5xl mb-4 sm:mb-6">
+               <div className="text-4xl text-center sm:text-5xl mb-4 sm:mb-6 font-mono">
                   About Me
                </div>
                <p className="mb-4 sm:mb-6">

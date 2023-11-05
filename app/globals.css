@@ -12,9 +12,10 @@
    
 } */
 
-/* body {
-
-} */
+body {
+  background-color: black;
+  color: white;
+}
 
 .image-slideshow {
   width: 200px; /* Set your desired width */

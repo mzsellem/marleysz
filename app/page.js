@@ -21,13 +21,13 @@ export default function Home() {
  };
   return (
     <>
-    <div className="sticky top-0 z-10 bg-white shadow-md p-4">
+    <div className="sticky top-0 z-10 p-4 font-mono navbar text-haywhite">
         <div className=" flex justify-center space-x-4">
-          <button onClick={() => scrollToSection("section1")} className="hover:underline">Intro</button>
-          <button onClick={() => scrollToSection("section2")} className="hover:underline">Projects</button>
-          <button onClick={() => scrollToSection("section3")} className="hover:underline">Skills</button>
-          <button onClick={() => scrollToSection("section4")} className="hover:underline">About</button>
-          <button onClick={() => scrollToSection("section5")} className="hover:underline">Contact</button>
+          <button onClick={() => scrollToSection("section1")} className="hover:underline hover:decoration-poppyred hover:decoration-4">Intro</button>
+          <button onClick={() => scrollToSection("section2")} className="hover:underline hover:decoration-poppyred hover:decoration-4">Projects</button>
+          <button onClick={() => scrollToSection("section3")} className="hover:underline hover:decoration-poppyred hover:decoration-4">Skills</button>
+          <button onClick={() => scrollToSection("section4")} className="hover:underline hover:decoration-poppyred hover:decoration-4">About</button>
+          <button onClick={() => scrollToSection("section5")} className="hover:underline hover:decoration-poppyred hover:decoration-4">Contact</button>
         </div>
     </div>
       <div className="m-6">
