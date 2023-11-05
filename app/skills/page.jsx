@@ -37,7 +37,7 @@ export default function Skills() {
 
    return (
       <>
-         <div className="flex flex-col h-full border-4 rounded-3xl p-6 mx-auto max-w-screen-md font-mono">
+         <div className="flex flex-col h-full p-6 mx-auto max-w-screen-md font-mono text-haywhite">
             <div className="w-full flex flex-col sm:items-center p-4">
                <div className="text-4xl mb-6">Skillset</div>
                {/* Use flex and flex-wrap to create three rows */}
@@ -50,7 +50,7 @@ export default function Skills() {
                               {obj.list.map((item) => (
                                  <li
                                     key={item}
-                                    className="list-inside list-disc bg-white shadow-md"
+                                    className="list-inside list-disc"
                                  >
                                     {item}
                                  </li>
@@ -61,15 +61,17 @@ export default function Skills() {
                   ))}
                </div>
 
-               <div className="w-full text-3xl flex flex-col md:text-center bg-white shadow-md md:p-6">
-                  <span className="font-bold mb-2">Bonus</span>
+               <div className="w-full text-3xl flex flex-col md:text-start md:p-6">
+                  <span className="font-bold mb-2 underline decoration-poppyred decoration-8">
+                     Bonus
+                  </span>
                   <div className="text-xl">
-                     <p className="md:text-center">
+                     <p className="md:text-start">
                         {" "}
                         <span className="font-bold">
                            Spoken Languages:
                         </span>{" "}
-                        &nbsp; French (native) and Japanese
+                        French (native) and Japanese
                      </p>
                   </div>
                </div>
