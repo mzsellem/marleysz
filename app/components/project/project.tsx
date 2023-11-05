@@ -1,6 +1,14 @@
+import React from "react";
 import ImageSlideshow from "../image-slideshow/image-slideshow";
 
-export default function Project({ images, title, description, techLinks }) {
+type ProjectProps = {
+   images: string[],
+   title: string,
+   description: string,
+   techLinks: { name: string, link: string }[]
+}
+
+export default function Project({ images, title, description, techLinks }: ProjectProps) {
    return (
       <div className="flex flex-col items-center">
          <div className="m-2">{title}</div>
@@ -12,7 +20,7 @@ export default function Project({ images, title, description, techLinks }) {
             {techLinks.map((tech, index) => (
                <a
                   key={index}
-                  href={tech.link} // Replace "example.com" with the actual link
+                  href={tech.link}
                   className="border rounded-xl p-2 text-xs"
                >
                   {tech.name}
@@ -22,5 +30,3 @@ export default function Project({ images, title, description, techLinks }) {
       </div>
    );
 }
-
-// text-haywhite bg-poppyred hover:bg-hoverred
