@@ -1,7 +1,7 @@
 export default function Intro() {
    return (
       <>
-         <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+         <div className="relative w-full">
             <video
                class="absolute w-full -z-10 object-cover"
                autoPlay
@@ -12,7 +12,7 @@ export default function Intro() {
                Your browser does not support the video tag.
             </video>
          </div>
-         <div className="flex flex-col md:h-full rounded-3xl p-8 mx-auto mt-44 md:mt-28 max-w-screen-md font-mono text-black">
+         <div className="flex flex-col md:h-full rounded-3xl p-8 mx-auto max-w-screen-md font-mono text-black">
             <div className="flex flex-col justify-center items-center text-center">
                <h1 className="text-6xl font-extralight md:text-8xl m-2 underline decoration-4 underline-offset-8">
                   MARLEY SELLEM
