@@ -1,13 +1,8 @@
 export default function Intro() {
    return (
       <>
-         <div className="relative w-full">
-            <video
-               class="absolute w-full -z-10 object-cover"
-               autoPlay
-               loop
-               muted
-            >
+         <div className="w-full">
+            <video class="fixed w-full -z-10 object-cover" autoPlay loop muted>
                <source src="wallpaper.mp4" type="video/mp4" />
                Your browser does not support the video tag.
             </video>
