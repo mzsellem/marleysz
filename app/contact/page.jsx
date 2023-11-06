@@ -11,7 +11,7 @@ export default function Contact() {
                   marleysellem@gmail.com
                </p>
             </div>
-            <div className="flex justify-center space-x-6 pb-2">
+            <div className="flex justify-start md:justify-center space-x-6 pb-2">
                <a href="https://github.com/mzsellem-GA">
                   <img
                      src="/github-mark.png"

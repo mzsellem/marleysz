@@ -4,15 +4,15 @@ export default function About() {
    return (
       <>
          <div className="flex flex-col justify-start items-center h-full p-6 mx-auto max-w-screen-md font-mono text-black">
-            <div className="w-full sm:w-1/2 justify-center flex">
+            <div className="w-full sm:w-1/2 md:justify-center flex">
                <img
                   src="/aboutpic.png"
                   alt="poppy in a field"
                   className="w-1/2 h-auto"
                />
             </div>
-            <div className="w-full sm:w-1/2 mt-4 text-center sm:text-center">
-               <div className="text-4xl text-center sm:text-5xl mb-4 sm:mb-6 font-mono">
+            <div className="w-full sm:w-1/2 mt-4 text-start sm:text-center">
+               <div className="text-4xl md:text-center sm:text-5xl mb-4 sm:mb-6 font-mono">
                   About Me
                </div>
                <p className="mb-4 sm:mb-6">
