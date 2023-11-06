@@ -16,12 +16,12 @@ export default function Project({ images, title, description, techLinks }: Proje
             <ImageSlideshow images={images} />
          </div>
          <div className="flex m-6 text-center text-sm">{description}</div>
-         <div className="space-x-2 mt-2 mb-4 flex flex-wrap justify-center">
+         <div className="space-x-2 -my-2 mb-4 flex flex-wrap justify-center items-center">
             {techLinks.map((tech, index) => (
                <a
                   key={index}
                   href={tech.link}
-                  className="border rounded-xl p-2 text-xs border-black text-black"
+                  className="border rounded-xl p-2 text-xs border-black text-black my-2"
                >
                   {tech.name}
                </a>
