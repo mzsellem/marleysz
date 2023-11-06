@@ -15,6 +15,7 @@ module.exports = {
         'hoverred': '#DD150F',
         'haywhite': '#eee2d2',
         'darkhay': '#A67F42',
+        'skyblue': '#b9dbed',
       }
     },
   },

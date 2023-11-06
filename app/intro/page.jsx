@@ -1,9 +1,9 @@
 export default function Intro() {
    return (
       <>
-         <div className="w-full">
+         <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <video
-               class="w-screen h-2/3 -z-10 object-cover fixed top-0 left-0 right-0"
+               class="absolute w-full md:1/2 -z-10 object-cover"
                autoPlay
                loop
                muted
@@ -20,18 +20,6 @@ export default function Intro() {
                <div className="text-xl md:mb-4 w-screen md:text-2xl mt-4 font-thin text-center">
                   FULL STACK SOFTWARE ENGINEER
                </div>
-            </div>
-            <div className="mt-4 flex md:flex-col items-center justify-center m-3">
-               {/* <div className="flex justify-center">
-                  <img
-                     src="/poppy2.png"
-                     alt="poppy in a field"
-                     className="w-3/4 md:w-3/4"
-                  />
-               </div> */}
-               {/* <div className="text-xl md:mb-4 md:text-4xl w-1/2 font-thin text-center">
-                  FULL STACK SOFTWARE ENGINEER
-               </div> */}
             </div>
          </div>
       </>
