@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         'poppyred': '#d02200',
         'hoverred': '#DD150F',
-        'haywhite': '#eee2d2',
+        'haywhite': '#DDD8D1',
         'darkhay': '#A67F42',
         'skyblue': '#b9dbed',
       }

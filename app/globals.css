@@ -15,10 +15,11 @@
 body {
   /* margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #b9dbed, #878c47 40%, #c4a578);
+  background: linear-gradient(to right, #d9edf8, #b4d8ea);
   background-size: 100% 100%;
   background-attachment: relative;  */
-  background-color: #b4d8ea;
+  /* background-color: #d9edf8; */
+  background: linear-gradient(45deg, #d9edf8, #b4d8ea);
   color: black;
 }
 

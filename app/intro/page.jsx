@@ -12,7 +12,7 @@ export default function Intro() {
                <h1 className="text-6xl font-extralight md:text-8xl m-2 underline decoration-4 underline-offset-8">
                   MARLEY SELLEM
                </h1>
-               <div className="text-xl md:mb-4 w-screen md:text-2xl mt-4 font-thin text-center">
+               <div className="text-xl md:mb-4 w-screen md:text-2xl mt-8 font-thin text-center">
                   FULL STACK SOFTWARE ENGINEER
                </div>
             </div>
