@@ -23,8 +23,8 @@ export default function Home() {
     <>
     <div className="flex justify-center sticky top-0 z-10">
     <div className="flex justify-center">
-      <div className="p-4 font-mono text-black bg-skyblue/75 rounded-2xl">
-          <div className="flex justify-center space-x-4">
+      <div className="p-4 font-mono text-black bg-haywhite/50 rounded-2xl">
+          <div className="flex justify-center space-x-4 text-sm md:text-base">
             <button onClick={() => scrollToSection("section1")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
             <button onClick={() => scrollToSection("section2")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
             <button onClick={() => scrollToSection("section3")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Skills</button>

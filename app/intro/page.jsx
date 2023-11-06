@@ -3,7 +3,7 @@ export default function Intro() {
       <>
          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <video
-               class="absolute w-full md:1/2 -z-10 object-cover"
+               class="absolute w-full -z-10 object-cover"
                autoPlay
                loop
                muted
