@@ -11,7 +11,7 @@ module.exports = {
         mono: ['Cutive Mono', 'monospace'],
       },
       colors: {
-        'poppyred': '#c2100b',
+        'poppyred': '#d02200',
         'hoverred': '#DD150F',
         'haywhite': '#eee2d2',
         'darkhay': '#A67F42',
