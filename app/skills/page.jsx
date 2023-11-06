@@ -61,8 +61,8 @@ export default function Skills() {
                   ))}
                </div>
 
-               <div className="w-full text-3xl flex flex-col md:text-start md:p-6">
-                  <span className="font-bold mb-2 underline decoration-poppyred decoration-8">
+               <div className="w-1/2 text-3xl flex flex-col md:text-start md:p-6">
+                  <span className="font-bold mb-4 underline decoration-poppyred decoration-8">
                      Bonus
                   </span>
                   <div className="text-xl">

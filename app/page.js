@@ -21,15 +21,17 @@ export default function Home() {
  };
   return (
     <>
-    <div className="flex justify-center sticky top-0 z-10">
-    <div className="p-4 font-mono text-black bg-darkhay/50 md:w-1/3 rounded-2xl flex justify-center">
-        <div className=" flex justify-center space-x-4">
-          <button onClick={() => scrollToSection("section1")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
-          <button onClick={() => scrollToSection("section2")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
-          <button onClick={() => scrollToSection("section3")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Skills</button>
-          <button onClick={() => scrollToSection("section4")} className="hover:underline hover:decoration-poppyred hover:decoration-8">About</button>
-          <button onClick={() => scrollToSection("section5")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Contact</button>
-        </div>
+    <div className="flex justify-center sticky top-0 z-10 ">
+    <div className="flex justify-center md:1/3">
+      <div className="p-4 font-mono text-black bg-darkhay/25 rounded-2xl">
+          <div className="flex justify-center space-x-4">
+            <button onClick={() => scrollToSection("section1")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
+            <button onClick={() => scrollToSection("section2")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
+            <button onClick={() => scrollToSection("section3")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Skills</button>
+            <button onClick={() => scrollToSection("section4")} className="hover:underline hover:decoration-poppyred hover:decoration-8">About</button>
+            <button onClick={() => scrollToSection("section5")} className="hover:underline hover:decoration-poppyred hover:decoration-8">Contact</button>
+          </div>
+      </div>
     </div>
     </div>
       <div className="m-6">
