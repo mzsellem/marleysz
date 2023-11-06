@@ -1,7 +1,16 @@
 export default function Intro() {
    return (
       <>
-         <div className="flex flex-col md:h-full  rounded-3xl p-8 mx-auto max-w-screen-md font-mono text-haywhite">
+         <div className="w-full">
+            <video
+               className="w-full"
+               controls // This adds playback controls like play, pause, volume, etc.
+            >
+               <source src="/wallpaper.mp4" type="video/mp4" />
+               Your browser does not support the video tag.
+            </video>
+         </div>
+         <div className="flex flex-col md:h-full  rounded-3xl p-8 mx-auto max-w-screen-md font-mono text-black">
             <div className="flex flex-col justify-center text-center">
                <h1 className="text-6xl font-extralight md:text-8xl m-2 underline decoration-4 underline-offset-8">
                   MARLEY SELLEM

@@ -14,6 +14,7 @@ module.exports = {
         'poppyred': '#c2100b',
         'hoverred': '#DD150F',
         'haywhite': '#eee2d2',
+        'darkhay': '#A67F42',
       }
     },
   },

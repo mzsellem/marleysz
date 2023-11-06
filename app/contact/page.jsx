@@ -1,7 +1,7 @@
 export default function Contact() {
    return (
       <>
-         <div className="flex flex-col h-full space-y-6 p-6 mx-auto max-w-screen-md font-mono text-haywhite">
+         <div className="flex flex-col h-full space-y-6 p-6 mx-auto max-w-screen-md font-mono text-black">
             <div className="flex justify-center flex-col space-y-6">
                <p className="flex justify-center text-5xl font-semibold">
                   Let's Chat

@@ -3,7 +3,7 @@ import "../../public/aboutpic.png";
 export default function About() {
    return (
       <>
-         <div className="flex flex-col justify-start items-center h-full p-6 mx-auto max-w-screen-md font-mono text-haywhite">
+         <div className="flex flex-col justify-start items-center h-full p-6 mx-auto max-w-screen-md font-mono text-black">
             <div className="w-full sm:w-1/2 justify-center flex">
                <img
                   src="/aboutpic.png"
