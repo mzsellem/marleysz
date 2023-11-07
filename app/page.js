@@ -38,17 +38,17 @@ export default function Home() {
           <div ref={sectionRefs.section1} className="section">
               <Intro />
           </div>
-          <div className="flex flex-col items-center">
-            <div ref={sectionRefs.section2} className="section bg-blue-400/50 rounded-3xl my-6">
+          <div className="flex flex-col items-center m-4">
+            <div ref={sectionRefs.section2} className="section bg-blue-400/50 rounded-3xl my-2">
                 <Projects />
             </div>
-            <div ref={sectionRefs.section3} className="section bg-blue-400/50 rounded-3xl my-6">
+            <div ref={sectionRefs.section3} className="section bg-blue-400/50 rounded-3xl my-2">
                 <Skills />
             </div>
-            <div ref={sectionRefs.section4} className="section bg-blue-400/50 rounded-3xl my-6">
+            <div ref={sectionRefs.section4} className="section bg-blue-400/50 rounded-3xl my-2">
                 <About />
             </div>
-            <div ref={sectionRefs.section5} className="section bg-blue-400/50 rounded-3xl">
+            <div ref={sectionRefs.section5} className="section bg-blue-400/50 rounded-3xl my-2">
                 <Contact />
           </div>
         </div>

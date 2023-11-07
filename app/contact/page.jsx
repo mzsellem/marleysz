@@ -1,7 +1,7 @@
 export default function Contact() {
    return (
       <>
-         <div className="flex flex-col h-full p-6 mx-auto max-w-screen-md font-mono text-black">
+         <div className="flex flex-col p-6 md:max-w-screen-md font-mono text-black">
             <div className="flex justify-center flex-col space-y-6 mb-6">
                <p className="flex justify-center text-5xl font-semibold">
                   Let's Chat
@@ -11,7 +11,7 @@ export default function Contact() {
                   marleysellem@gmail.com
                </p>
             </div>
-            <div className="flex justify-start md:justify-center space-x-6 pb-2">
+            <div className="flex justify-center space-x-6 pb-2">
                <a href="https://github.com/mzsellem-GA">
                   <img
                      src="/github-mark.png"
