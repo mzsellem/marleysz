@@ -21,7 +21,7 @@ export default function Project({ images, title, description, techLinks }: Proje
                <a
                   key={index}
                   href={tech.link}
-                  className="border rounded-xl p-2 text-xs border-black text-black my-2"
+                  className="border pill rounded-xl p-2 text-xs border-black text-black my-2"
                >
                   {tech.name}
                </a>

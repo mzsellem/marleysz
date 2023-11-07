@@ -34,11 +34,11 @@ export default function Home() {
       </div>
     </div>
     </div>
-      <div className="my-6">
+      <div>
           <div ref={sectionRefs.section1} className="section">
               <Intro />
           </div>
-          <div className="m-6">
+          <div className="flex flex-col items-center">
             <div ref={sectionRefs.section2} className="section bg-blue-400/50 rounded-3xl my-6">
                 <Projects />
             </div>
