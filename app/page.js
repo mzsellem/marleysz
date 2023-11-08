@@ -35,7 +35,7 @@ export default function Home() {
     </div>
     </div>
       <div>
-          <div ref={sectionRefs.section1} className="section">
+          <div ref={sectionRefs.section1} className="section h-screen">
               <Intro />
           </div>
           <div className="flex flex-col items-center m-4">
