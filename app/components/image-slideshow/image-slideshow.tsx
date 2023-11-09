@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ProjectProps } from "../project/project";
 
-export default function ImageSlideshow({ images }: ProjectProps) {
+export default function ImageSlideshow({ images }: {images: string[]}) {
    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
    const nextImage = () => {
