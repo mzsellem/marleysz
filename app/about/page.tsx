@@ -1,3 +1,4 @@
+import React from "react"
 import "../../public/marley.png";
 
 export default function About() {
