@@ -1,7 +1,7 @@
 import React from "react";
 import ImageSlideshow from "../image-slideshow/image-slideshow";
 
-type ProjectProps = {
+export type ProjectProps = {
    images: string[],
    title: string,
    description: string,
