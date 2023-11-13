@@ -10,7 +10,7 @@ export const theme = {
       mono: ['Cutive Mono', 'monospace'],
     },
     colors: {
-      'poppyred': '#d02200',
+      'poppyred': '#e74606',
       'hoverred': '#DD150F',
       'haywhite': '#DDD8D1',
       'darkhay': '#A67F42',
