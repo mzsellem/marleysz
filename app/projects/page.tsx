@@ -94,7 +94,7 @@ export default function Projects() {
                      >
                         &larr;
                      </button>
-                     <div className="text-4xl mb-6 mt-4 text-black">Projects</div>
+                     <div className="text-4xl mb-6 text-black">Projects</div>
                      <button
                         onClick={goToNextProject}
                         className="p-2 w-1/5 text-black md:w-1/6 font-bold transform transition-transform hover:scale-150"
