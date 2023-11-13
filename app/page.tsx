@@ -45,7 +45,7 @@ export default function Home() {
           <div ref={section1Ref} className="section h-screen">
               <Intro />
           </div>
-          <div className="flex flex-col items-center m-4">
+          <div className="flex flex-col items-center m-6">
             <div ref={section2Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2 mt-52 md:mt-44">
                 <Projects />
             </div>
