@@ -7,18 +7,36 @@ import About from "./about/page";
 import Intro from "./intro/page";
 import "../public/poppy2.png"
 
-export default function Home() {
-  const sectionRefs = {
-    section1: useRef(),
-    section2: useRef(),
-    section3: useRef(),
-    section4: useRef(),
-    section5: useRef(),
- };
+// Define an enum for section names
+enum SectionNames {
+  Section1 = "section1",
+  Section2 = "section2",
+  Section3 = "section3",
+  Section4 = "section4",
+  Section5 = "section5",
+}
 
- const scrollToSection = (section) => {
-    sectionRefs[section].current.scrollIntoView({ behavior: "smooth" });
- };
+// Define a type for section refs
+type SectionRefs = Record<SectionNames, RefObject<HTMLDivElement>>;
+
+export default function Home() {
+ 
+    // Use the SectionRefs type for sectionRefs
+    const sectionRefs: SectionRefs = {
+      section1: useRef<HTMLDivElement>(null),
+      section2: useRef<HTMLDivElement>(null),
+      section3: useRef<HTMLDivElement>(null),
+      section4: useRef<HTMLDivElement>(null),
+      section5: useRef<HTMLDivElement>(null),
+    };
+  
+    // Provide a type for the section parameter
+    const scrollToSection = (section: SectionNames) => {
+      if (sectionRefs[section] && sectionRefs[section].current) {
+        sectionRefs[section].current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
     <>
     <div className="flex justify-center sticky top-0 z-10">
