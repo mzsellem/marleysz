@@ -60,7 +60,22 @@ export default function Projects() {
             { name: "Figma", link: "https://www.figma.com/" },
          ],
       },
-      // { title: "project three", description: "hola" },
+      { title: "Soundify", description: "Soundify is a music application that allows the user to have more control of their playlists increasing functionality and user experience. Soundify prioritizes user convenience by enabling a powerful search functionality allowing users to quickly add or delete songs to their playlists.",
+      images: [
+         "soundify.png",
+      ],
+      techLinks: [
+         { name: "Python", link: "https://www.python.org/" },
+         { name: "Django", link: "https://www.djangoproject.com/" },
+         { name: "Spotify API", link: "https://developer.spotify.com/documentation/web-api" },
+         {
+            name: "PostgreSQL",
+            link: "https://www.postgresql.org/",
+         },
+         { name: "Trello", link: "https://trello.com/" },
+         { name: "Figma", link: "https://www.figma.com/" },
+      ],
+   }
       // { title: "project four", description: "nihao" a},
       // { title: "project five", description: "konnichiwa" },
       // { title: "project six", description: "guten tag" },

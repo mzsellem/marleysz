@@ -11,7 +11,7 @@ export type ProjectProps = {
 export default function Project({ images, title, description, techLinks }: ProjectProps) {
    return (
       <div className="flex flex-col items-center text-black">
-         <div className="m-2">{title}</div>
+         <div className="">{title}</div>
          <div className="image-slideshow md:flex items-center mt-2 md:mb-8">
             <ImageSlideshow images={images} />
          </div>
