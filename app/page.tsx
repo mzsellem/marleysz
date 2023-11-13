@@ -17,11 +17,12 @@ export default function Home() {
 
   const scrollToSectionWithOffset = (ref, offset) => {
     if (ref.current) {
-      window.scrollTo({
-        top: ref.current.offsetTop - offset,
-        behavior: "smooth", // Optional, for smooth scrolling
-      });
-    }
+    const rect = ref.current.getBoundingClientRect();
+    window.scrollTo({
+      top: rect.top + window.scrollY - offset,
+      behavior: "smooth",
+    });
+  }
   };
 
 
