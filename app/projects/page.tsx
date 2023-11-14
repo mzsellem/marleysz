@@ -71,8 +71,16 @@ export default function Projects() {
          { name: "Bootstrap", link: "https://getbootstrap.com/" },
       ],
    },
-      // { title: "project five", description: "konnichiwa" },
-      // { title: "project six", description: "guten tag" },
+      { title: "Match The Flag", description: "This is a game of concentration. You have a limited number of guesses. Can you correctly match the pairs of flags? Let's find out!",
+      image: "match-the-flag.png",
+      techLinks: [
+         { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+         { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+         { name: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/javascript" },
+         { name: "Figma", link: "https://www.figma.com/" },
+         { name: "Pixabay", link: "https://pixabay.com/" },
+      ],
+   },
    ];
 
    const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
