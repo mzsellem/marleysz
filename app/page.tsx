@@ -30,13 +30,13 @@ export default function Home() {
     <>
     <div className="flex justify-center sticky top-0">
     <div className="flex justify-center">
-      <div className="p-4 font-mono text-black rounded-2xl w-screen">
-          <div className="flex justify-center space-x-4 text-sm md:text-base bg-other rounded-lg">
-            <button onClick={() => scrollToSectionWithOffset(section1Ref, 50)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
-            <button onClick={() => scrollToSectionWithOffset(section2Ref, 50)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
-            <button onClick={() => scrollToSectionWithOffset(section3Ref, 50)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Skills</button>
-            <button onClick={() => scrollToSectionWithOffset(section4Ref, 50)} className="hover:underline hover:decoration-poppyred hover:decoration-8">About</button>
-            <button onClick={() => scrollToSectionWithOffset(section5Ref, 50)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Contact</button>
+      <div className="p-4 font-mono text-black w-screen bg-other">
+          <div className="flex justify-center space-x-4 text-sm md:text-base">
+            <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
+            <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
+            <button onClick={() => scrollToSectionWithOffset(section3Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Skills</button>
+            <button onClick={() => scrollToSectionWithOffset(section4Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">About</button>
+            <button onClick={() => scrollToSectionWithOffset(section5Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Contact</button>
           </div>
       </div>
     </div>
