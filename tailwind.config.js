@@ -15,6 +15,7 @@ export const theme = {
       'haywhite': '#DDD8D1',
       'darkhay': '#A67F42',
       'skyblue': '#b9dbed',
+      'other': '#d5d4c2',
     }
   },
 };
