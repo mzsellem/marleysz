@@ -12,7 +12,7 @@ export default function About() {
                   className="w-1/2 h-auto"
                />
             </div>
-            <div className="w-full sm:w-1/2 mt-4 text-start sm:text-center">
+            <div className="w-full sm:w-3/4 mt-4 text-start sm:text-center">
                <div className="text-4xl md:text-center sm:text-5xl mb-4 sm:mb-6 font-mono">
                   About Me
                </div>
