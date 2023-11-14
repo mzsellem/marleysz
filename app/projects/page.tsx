@@ -54,8 +54,23 @@ export default function Projects() {
          { name: "Trello", link: "https://trello.com/" },
          { name: "Figma", link: "https://www.figma.com/" },
       ],
-   }
-      // { title: "project four", description: "nihao" a},
+   },
+      { title: "Sellem Sitters", description: "The Cat Sitter app is a simple, to-do list-style application designed to help cat sitters manage their feline clientele.",
+      image: "sellem-sitters.png",
+      techLinks: [
+         { name: "Express", link: "https://expressjs.com/" },
+         { name: "Node.js", link: "https://nodejs.org/en" },
+         { name: "EJS", link: "https://www.npmjs.com/package/ejs" },
+         { name: "MongoDB", link: "https://www.mongodb.com/" },
+         { name: "Mongoose", link: "https://mongoosejs.com/" },
+         {
+            name: "Google OAuth",
+            link: "https://www.passportjs.org/packages/passport-google-oauth2/",
+         },
+         { name: "Passport", link: "https://www.passportjs.org/docs/" },
+         { name: "Bootstrap", link: "https://getbootstrap.com/" },
+      ],
+   },
       // { title: "project five", description: "konnichiwa" },
       // { title: "project six", description: "guten tag" },
    ];
