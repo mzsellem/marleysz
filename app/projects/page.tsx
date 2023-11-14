@@ -1,14 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Project from "../components/project/project";
-import "../../public/logo.png";
-import "../../public/account.png";
-import "../../public/ai-chatbot.png";
+import "../../public/login.png";
 import "../../public/lamadoro-login.png";
-import "../../public/lamadoro-about.png";
-import "../../public/lamadoro-home.png";
-import "../../public/lamadoro-tasks.png";
-import "../../public/lamadoro-timer.png";
+import "../../public/soundify.png";
 
 export default function Projects() {
    const projects = [
@@ -16,15 +11,7 @@ export default function Projects() {
          title: "AI Chatbot",
          description:
             "Empower your leadership potential with our cutting-edge leadership development app powered by OpenAI, tailored to enhance your skills, foster innovation, and guide you towards becoming a dynamic and effective leader.",
-         images: [
-            "login.png",
-            "account.png",
-            "challenge.png",
-            "ai-chatbot.png",
-            "analytics-edit.png",
-            "feedback.png",
-            "control-panel.png",
-         ],
+         image: "login.png",
          techLinks: [
             { name: "Nextjs", link: "https://nextjs.org/" },
             { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
@@ -39,13 +26,7 @@ export default function Projects() {
          title: "Lamadoro",
          description:
             "Lamadoro, a user-friendly app, leverages the Pomodoro Technique to enhance your productivity by breaking work into manageable intervals, providing rejuvenating breaks, and inspiring you with motivational quotes, ultimately leading to increased productivity and reduced burnout.",
-         images: [
-            "lamadoro-login.png",
-            "lamadoro-home.png",
-            "lamadoro-about.png",
-            "lamadoro-tasks.png",
-            "lamadoro-timer.png",
-         ],
+         image: "lamadoro-login.png",
          techLinks: [
             { name: "Express", link: "https://expressjs.com/" },
             { name: "Reactjs", link: "https://react.dev/" },
@@ -61,9 +42,7 @@ export default function Projects() {
          ],
       },
       { title: "Soundify", description: "Soundify is a music application that allows the user to have more control of their playlists increasing functionality and user experience. Soundify prioritizes user convenience by enabling a powerful search functionality allowing users to quickly add or delete songs to their playlists.",
-      images: [
-         "soundify.png",
-      ],
+      image: "soundify.png",
       techLinks: [
          { name: "Python", link: "https://www.python.org/" },
          { name: "Django", link: "https://www.djangoproject.com/" },
@@ -109,7 +88,7 @@ export default function Projects() {
                      >
                         &larr;
                      </button>
-                     <div className="text-4xl mb-6 text-black">Projects</div>
+                     <div className="text-4xl text-black">Projects</div>
                      <button
                         onClick={goToNextProject}
                         className="p-2 w-1/5 text-black md:w-1/6 font-bold transform transition-transform hover:scale-150"
@@ -121,7 +100,7 @@ export default function Projects() {
                <div className="flex flex-row items-center p-4">
                   <div className="w-full">
                      <Project
-                        images={currentProject.images}
+                        image={currentProject.image}
                         title={currentProject.title}
                         description={currentProject.description}
                         techLinks={currentProject.techLinks}

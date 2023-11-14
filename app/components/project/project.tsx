@@ -1,19 +1,18 @@
 import React from "react";
-import ImageSlideshow from "../image-slideshow/image-slideshow";
 
 export type ProjectProps = {
-   images: string[],
+   image: string,
    title: string,
    description: string,
    techLinks: { name: string, link: string }[]
 }
 
-export default function Project({ images, title, description, techLinks }: ProjectProps) {
+export default function Project({ image, title, description, techLinks }: ProjectProps) {
    return (
       <div className="flex flex-col items-center text-black">
-         <div className="">{title}</div>
-         <div className="image-slideshow md:flex items-center mt-2 md:mb-8">
-            <ImageSlideshow images={images} />
+         <div>{title}</div>
+         <div className="image-slideshow md:flex items-center pt-6">
+            <img src={image} alt={title} />
          </div>
          <div className="flex m-6 text-center text-sm">{description}</div>
          <div className="space-x-2 -my-2 mb-4 flex flex-wrap justify-center items-center">
