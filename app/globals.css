@@ -2,17 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-} */
-
-/* @media () {
-   
-} */
-
 body {
+ /* background: linear-gradient(to bottom, #b5d9e9, #d4e9f8); */
  /* background: #d5d4c2; */
   color: black;
 }

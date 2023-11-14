@@ -30,7 +30,7 @@ export default function Home() {
     <>
     <div className="flex justify-center sticky top-0">
     <div className="flex justify-center">
-      <div className="p-4 font-mono text-black w-screen bg-other">
+      <div className="p-4 font-mono text-black bg-other w-screen">
           <div className="flex justify-center space-x-4 text-sm md:text-base">
             <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
             <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
@@ -44,7 +44,6 @@ export default function Home() {
       <div>
           <div ref={section1Ref} className="section h-screen">
               <Intro />
-
           </div>
           <div className="flex flex-col items-center m-6">
             <div ref={section2Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2 mt-52 md:mt-44">
@@ -56,7 +55,7 @@ export default function Home() {
             <div ref={section4Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2">
                 <About />
             </div>
-            <div ref={section5Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2">
+            <div ref={section5Ref} className="section md:w-screen flex text-center justify-center bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2">
                 <Contact />
           </div>
         </div>
