@@ -5,7 +5,7 @@ export default function Intro() {
       <>
          <div className="w-full">
             <video
-               className="fixed w-full -z-10 object-cover"
+               className="fixed w-full h-full -z-10 object-cover"
                autoPlay
                loop
                muted
