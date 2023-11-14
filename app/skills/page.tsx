@@ -39,7 +39,7 @@ export default function Skills() {
 
    return (
       <>
-         <div className="flex flex-col h-full p-6 mx-auto max-w-screen-md font-mono text-black">
+         <div className="flex flex-col h-full p-6 mx-auto w-3/4 font-mono text-black">
             <div className="w-full flex flex-col sm:items-center p-4">
                <div className="text-4xl mb-6">Skillset</div>
                {/* Use flex and flex-wrap to create three rows */}
