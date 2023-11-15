@@ -106,7 +106,7 @@ export default function Projects() {
 
    return (
       <>
-         <div className="mx-auto w-3/4 font-mono">
+         <div className="mx-auto w-full font-mono">
             <div className="flex flex-col justify-center text-center">
                <div className="space-x-2 flex justify-center mt-4 p-4 flex-col">
                      <div className="text-4xl text-black">Projects</div>
