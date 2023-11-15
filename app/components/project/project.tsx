@@ -18,14 +18,15 @@ export default function Project({ image, title, description, techLinks, projectL
             </a>
          </div>
          <div className="flex m-6 text-center text-sm">{description}</div>
-         <div className="space-x-2 -my-2 mb-4 flex flex-wrap justify-center items-center -z-10">
+         <div className="space-x-2 -my-2 mb-4 flex flex-wrap justify-center items-center">
             {techLinks.map((tech, index) => (
                <a
                   key={index}
                   href={tech.link}
-                  className="rounded-xl text-xs border-black text-black my-2 btn draw-border"
                >
-                  {tech.name}
+                  <div className="rounded-xl text-xs border-black text-black my-2 btn draw-border -z-10">
+                     {tech.name}
+                  </div>
                </a>
             ))}
          </div>
