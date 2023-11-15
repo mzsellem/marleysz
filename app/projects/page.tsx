@@ -109,7 +109,7 @@ export default function Projects() {
          <div className="mx-auto w-3/4 font-mono">
             <div className="flex flex-col justify-center text-center">
                <div className="space-x-2 flex justify-center mt-4 p-4 flex-col">
-                  <div className="space-x-4 flex justify-center">
+                  <div className="space-x-4 flex justify-center -z-10">
                      <button
                         onClick={goToPreviousProject}
                         className="p-2 w-1/5 text-black md:w-1/6 font-bold transform transition-transform hover:scale-150"
