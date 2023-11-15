@@ -3,21 +3,21 @@ import React from "react"
 export default function Skills() {
    const skillCats = [
       {
-         category: "Languages",
-         list: ["HTML", "CSS", "Python", "EJS", "JavaScript"],
-      },
-      { category: "Databases", list: ["MongoDB", "PostgreSQL", "Supabase"] },
-      {
          category: "Frameworks/Libraries",
          list: ["Express.js", "Node.js", "React.js", "Django", "Mongoose"],
       },
       {
-         category: "Auth",
-         list: ["Google OAuth", "Passport.js", "Supabase Magic Link"],
+         category: "Languages",
+         list: ["HTML", "CSS", "Python", "EJS", "JavaScript"],
       },
       {
          category: "Concepts/Patterns",
          list: ["REST API", "Object Oriented Programming", "Agile", "Scrum"],
+      },
+      { category: "Databases", list: ["MongoDB", "PostgreSQL", "Supabase"] },
+      {
+         category: "Auth",
+         list: ["Google OAuth", "Passport.js", "Supabase Magic Link"],
       },
       {
          category: "Other",
