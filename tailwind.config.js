@@ -16,6 +16,7 @@ export const theme = {
       'darkhay': '#A67F42',
       'skyblue': '#b9dbed',
       'other': '#d5d4c2',
+      'grass': '#58672b',
     }
   },
 };

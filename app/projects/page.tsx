@@ -21,6 +21,7 @@ export default function Projects() {
             { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
             { name: "Tailwind UI", link: "https://tailwindui.com/" },
          ],
+         projectLink: "",
       },
       {
          title: "Lamadoro",
@@ -40,6 +41,7 @@ export default function Projects() {
             },
             { name: "Figma", link: "https://www.figma.com/" },
          ],
+         projectLink: "https://lamadoro.onrender.com",
       },
       { title: "Soundify", description: "Soundify is a music application that allows the user to have more control of their playlists increasing functionality and user experience. Soundify prioritizes user convenience by enabling a powerful search functionality allowing users to quickly add or delete songs to their playlists.",
       image: "soundify.png",
@@ -54,6 +56,7 @@ export default function Projects() {
          { name: "Trello", link: "https://trello.com/" },
          { name: "Figma", link: "https://www.figma.com/" },
       ],
+      projectLink: "https://soundify-ahje.onrender.com/",
    },
       { title: "Sellem Sitters", description: "The Cat Sitter app is a simple, to-do list-style application designed to help cat sitters manage their feline clientele.",
       image: "sellem-sitters.png",
@@ -70,6 +73,7 @@ export default function Projects() {
          { name: "Passport", link: "https://www.passportjs.org/docs/" },
          { name: "Bootstrap", link: "https://getbootstrap.com/" },
       ],
+      projectLink: "https://sellemsitters.fly.dev/",
    },
       { title: "Match The Flag", description: "This is a game of concentration. You have a limited number of guesses. Can you correctly match the pairs of flags? Let's find out!",
       image: "match-the-flag.png",
@@ -80,6 +84,7 @@ export default function Projects() {
          { name: "Figma", link: "https://www.figma.com/" },
          { name: "Pixabay", link: "https://pixabay.com/" },
       ],
+      projectLink: "https://mzsellem-ga.github.io/concentration-memory-game/",
    },
    ];
 
@@ -127,6 +132,7 @@ export default function Projects() {
                         title={currentProject.title}
                         description={currentProject.description}
                         techLinks={currentProject.techLinks}
+                        projectLink={currentProject.projectLink}
                      />
                   </div>
                </div>
