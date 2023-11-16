@@ -33,6 +33,7 @@ export default function Skills() {
             "Resend",
             "Vercel",
             "Vercel AI SDK",
+            "Object-Oriented Programming",
          ],
       },
    ];
