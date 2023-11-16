@@ -18,6 +18,7 @@ export const theme = {
       'skyblue': '#b9dbed',
       'other': '#d5d4c2',
       'grass': '#58672b',
+      'grey': '#e5e7eb',
     }
   },
 };

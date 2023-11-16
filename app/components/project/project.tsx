@@ -14,7 +14,7 @@ export default function Project({ image, title, description, techLinks, projectL
          <div>{title}</div>
          <div className="format flex">
             <a href={projectLink}>
-               <img className="image-slideshow mt-4 flex justify-center items-center group-hover:scale-110 transition-transform border-skyblue border-4 rounded-lg" src={image} alt={title} />
+               <img className="image-slideshow mt-4 flex justify-center items-center group-hover:scale-110 transition-transform border-grey border-4 rounded-lg" src={image} alt={title} />
             </a>
          </div>
          <div className="flex m-6 text-center text-sm">{description}</div>
@@ -24,7 +24,7 @@ export default function Project({ image, title, description, techLinks, projectL
                   key={index}
                   href={tech.link}
                >
-                  <div className="rounded-xl text-xs text-black my-2 p-2 hover:bg-brightred hover:text-white">
+                  <div className="rounded-xl text-xs text-black my-2 p-2 hover:bg-brightred hover:text-white border">
                      {tech.name}
                   </div>
                </a>
