@@ -24,7 +24,7 @@ export default function Project({ image, title, description, techLinks, projectL
                   key={index}
                   href={tech.link}
                >
-                  <div className="rounded-xl text-xs border-black text-black my-2 btn draw-border">
+                  <div className="rounded-xl text-xs text-black my-2 p-2 hover:bg-brightred hover:text-white">
                      {tech.name}
                   </div>
                </a>

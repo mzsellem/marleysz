@@ -32,11 +32,11 @@ export default function Home() {
     <div className="flex justify-center">
       <div className="p-4 font-mono text-black bg-other w-screen">
           <div className="flex justify-center space-x-4 text-sm md:text-base">
-            <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Intro</button>
-            <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Projects</button>
-            <button onClick={() => scrollToSectionWithOffset(section3Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Skills</button>
-            <button onClick={() => scrollToSectionWithOffset(section4Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">About</button>
-            <button onClick={() => scrollToSectionWithOffset(section5Ref, 65)} className="hover:underline hover:decoration-poppyred hover:decoration-8">Contact</button>
+            <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Intro</button>
+            <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Projects</button>
+            <button onClick={() => scrollToSectionWithOffset(section3Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Skills</button>
+            <button onClick={() => scrollToSectionWithOffset(section4Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">About</button>
+            <button onClick={() => scrollToSectionWithOffset(section5Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Contact</button>
           </div>
       </div>
     </div>

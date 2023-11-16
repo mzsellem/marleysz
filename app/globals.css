@@ -9,11 +9,11 @@ body {
 }
 
 .format {
-  width: 250px; /* Set your desired width */
-  height: 175px; /* Set your desired height */
+  width: 250px; 
+  height: 175px;
 }
 
-.draw-border {
+/* .draw-border {
   color: black;
   transition: color 0.25s 0.0833333333s;
   position: relative;
@@ -29,16 +29,16 @@ body {
   height: 0;
   bottom: 0;
   right: 0;
-}
-.draw-border::before {
+} */
+/* .draw-border::before {
   border-bottom-width: 4px;
   border-left-width: 4px;
 }
 .draw-border::after {
   border-top-width: 4px;
   border-right-width: 4px;
-}
-.draw-border:hover {
+} */
+/* .draw-border:hover {
   color: black;
 }
 .draw-border:hover::before,
@@ -49,14 +49,14 @@ body {
   height: 100%;
   border-radius: 8px; /* Adjust the value to match the border-radius of .btn */
 
-}
-.draw-border:hover::before {
+/* } */ 
+/* .draw-border:hover::before {
   transition-delay: 0s, 0s, 0.25s;
 }
 .draw-border:hover::after {
   transition-delay: 0s, 0.25s, 0s;
-}
-
+} */
+/* 
 .btn {
   background: none;
   border: 1px solid #b9dbed;
@@ -67,5 +67,5 @@ body {
 }
 .btn:focus {
   outline: 2px dotted #55d7dc;
-}
+} */
 
