@@ -61,7 +61,7 @@ export default function Skills() {
             </div>
 
             <div className="max-w-2xl mt-6 mb-10"> {/* Center the bonus section */}
-                  <div className="w-full text-3xl flex flex-wrap md:justify-center md:text-center">
+                  <div className="w-full text-3xl flex flex-wrap text-left">
                      <span className="font-bold underline decoration-brightred decoration-8">
                         Bonus
                      </span>
