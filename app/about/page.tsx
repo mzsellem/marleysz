@@ -9,7 +9,7 @@ export default function About() {
                <img
                   src="/marley.png"
                   alt="poppy in a field"
-                  className="w-1/2 h-auto"
+                  className="w-1/2 h-auto border rounded-lg border-4"
                />
             </div>
             <div className="w-full sm:w-3/4 mt-4 text-start sm:text-center">

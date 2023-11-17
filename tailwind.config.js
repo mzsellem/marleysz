@@ -12,7 +12,8 @@ export const theme = {
     colors: {
       'poppyred': '#e74606',
       'hoverred': '#DD150F',
-      'brightred': '#d52005',
+      // 'brightred': '#d52005',
+      'brightred': '#f62809',
       'haywhite': '#DDD8D1',
       'darkhay': '#A67F42',
       'skyblue': '#b9dbed',
