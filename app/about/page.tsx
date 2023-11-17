@@ -4,16 +4,16 @@ import "../../public/marley.png";
 export default function About() {
    return (
       <>
-         <div className="flex flex-col justify-start items-center h-full p-6 mx-auto w-3/4 font-mono text-black">
-            <div className="w-full sm:w-1/2 md:justify-center flex">
+         <div className="flex flex-col items-center justify-start w-3/4 h-full p-6 mx-auto font-mono text-black">
+            <div className="flex w-full sm:w-1/2 md:justify-center">
                <img
                   src="/marley.png"
                   alt="poppy in a field"
-                  className="w-1/2 h-auto border rounded-lg border-4"
+                  className="w-1/2 h-auto border border-4 rounded-lg"
                />
             </div>
-            <div className="w-full sm:w-3/4 mt-4 text-start sm:text-center">
-               <div className="text-4xl md:text-center sm:text-4xl mb-4 sm:mb-6 font-mono">
+            <div className="w-full mt-4 sm:w-3/4 text-start sm:text-center">
+               <div className="mb-4 font-mono text-4xl md:text-center sm:text-4xl sm:mb-6">
                   About Me
                </div>
                <p className="mb-4 sm:mb-6">

@@ -28,9 +28,9 @@ export default function Home() {
 
   return (
     <>
-    <div className="flex justify-center sticky top-0">
+    <div className="sticky top-0 flex justify-center">
     <div className="flex justify-center">
-      <div className="p-4 font-mono text-black bg-other w-screen">
+      <div className="w-screen p-4 font-mono text-black bg-other">
           <div className="flex justify-center space-x-4 text-sm md:text-base">
             <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Intro</button>
             <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Projects</button>
@@ -42,20 +42,20 @@ export default function Home() {
     </div>
     </div>
       <div>
-          <div ref={section1Ref} className="section h-screen">
+          <div ref={section1Ref} className="h-screen section">
               <Intro />
           </div>
           <div className="flex flex-col items-center m-6">
-            <div ref={section2Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2 mt-52 md:mt-44 md:w-3/4">
+            <div ref={section2Ref} className="my-2 section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl mt-52 md:mt-44 md:w-3/4">
                 <Projects />
             </div>
-            <div ref={section3Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2 md:w-3/4">
+            <div ref={section3Ref} className="my-2 section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl md:w-3/4">
                 <Skills />
             </div>
-            <div ref={section4Ref} className="section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2 md:w-3/4">
+            <div ref={section4Ref} className="my-2 section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl md:w-3/4">
                 <About />
             </div>
-            <div ref={section5Ref} className="section flex text-center justify-center bg-blue-400/50 md:bg-blue-400/25 rounded-3xl my-2 md:w-3/4">
+            <div ref={section5Ref} className="flex justify-center my-2 text-center section bg-blue-400/50 md:bg-blue-400/25 rounded-3xl md:w-3/4">
                 <Contact />
           </div>
         </div>

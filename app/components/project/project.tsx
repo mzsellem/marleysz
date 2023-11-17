@@ -12,19 +12,19 @@ export default function Project({ image, title, description, techLinks, projectL
    return (
       <div className="flex flex-col items-center text-black">
          <div>{title}</div>
-         <div className="format flex group">
+         <div className="flex format group">
             <a href={projectLink}>
-               <img className="image-slideshow mt-4 flex justify-center items-center group-hover:scale-110 transition-transform border-grey border-4 rounded-lg" src={image} alt={title} />
+               <img className="flex items-center justify-center mt-4 transition-transform border-4 rounded-lg image-slideshow group-hover:scale-110 border-grey" src={image} alt={title} />
             </a>
          </div>
-         <div className="flex m-6 text-center text-sm">{description}</div>
-         <div className="space-x-2 -my-2 mb-4 flex flex-wrap justify-center items-center">
+         <div className="flex m-6 text-sm text-center">{description}</div>
+         <div className="flex flex-wrap items-center justify-center mb-4 -my-2 space-x-2">
             {techLinks.map((tech, index) => (
                <a
                   key={index}
                   href={tech.link}
                >
-                  <div className="rounded-xl text-xs text-black my-2 p-2 hover:bg-brightred hover:text-white border">
+                  <div className="p-2 my-2 text-xs text-black border rounded-xl hover:bg-brightred hover:text-white">
                      {tech.name}
                   </div>
                </a>

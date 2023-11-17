@@ -14,7 +14,7 @@ export default function RootLayout({ children }: {children?: ReactNode}) {
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <footer className="text-center font-bold">&copy; 2023 Marleysz</footer>
+        <footer className="font-bold text-center">&copy; 2023 Marleysz</footer>
       </body>
     </html>
   )

@@ -3,8 +3,8 @@ import React from "react"
 export default function Contact() {
    return (
       <>
-         <div className="flex flex-col p-6 font-mono w-3/4 text-black">
-            <div className="flex justify-center flex-col space-y-6 mb-6">
+         <div className="flex flex-col w-3/4 p-6 font-mono text-black">
+            <div className="flex flex-col justify-center mb-6 space-y-6">
                <p className="flex justify-center text-5xl font-semibold">
                   Let's Chat
                </p>
@@ -13,7 +13,7 @@ export default function Contact() {
                   marleysellem@gmail.com
                </p>
             </div>
-            <div className="flex justify-center space-x-6 pb-2">
+            <div className="flex justify-center pb-2 space-x-6">
                <a href="https://github.com/mzsellem-GA">
                   <img
                      src="/github-mark.png"
