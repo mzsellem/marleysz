@@ -10,9 +10,9 @@ export type ProjectProps = {
 
 export default function Project({ image, title, description, techLinks, projectLink }: ProjectProps) {
    return (
-      <div className="flex flex-col items-center text-black group">
+      <div className="flex flex-col items-center text-black">
          <div>{title}</div>
-         <div className="format flex">
+         <div className="format flex group">
             <a href={projectLink}>
                <img className="image-slideshow mt-4 flex justify-center items-center group-hover:scale-110 transition-transform border-grey border-4 rounded-lg" src={image} alt={title} />
             </a>
