@@ -13,23 +13,20 @@ export default function Skills() {
       },
       {
          category: "Auth",
-         list: ["Google OAuth", "Passport.js", "Supabase Magic Link"],
+         list: ["Google OAuth", "Passport.js", "Magic Link"],
       },
       {
          category: "Concepts/Patterns",
-         list: ["REST API", "Object Oriented Programming", "Agile", "Scrum"],
+         list: ["REST API", "OOP", "Agile", "Scrum"],
       },
       {
          category: "Other",
          list: [
-            "Git",
-            "Github",
+            "Git/Github",
             "Trello",
-            "Fly.io",
             "Bootstrap",
             "JSON",
-            "Tailwind CSS",
-            "TailWind UI",
+            "Tailwind CSS/UI",
             "Resend",
             "Vercel",
             "Vercel AI SDK",
