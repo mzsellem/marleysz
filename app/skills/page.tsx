@@ -39,44 +39,41 @@ export default function Skills() {
 
    return (
       <>
-    <div className="font-mono text-black">
-   <div className="text-4xl mt-8 mb-6 text-center">Skillset</div>
-   <div className="mx-auto max-w-2xl"> {/* Center the content and set a max-width */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-4 text-left">
-         {skillCats.map((obj) => (
-            <div key={obj.category}>
-               <div className="text-lg">
-                  <h1 className="font-bold">{obj.category}</h1>
-                  <ul>
-                     {obj.list.map((item) => (
-                        <li key={item} className="list-inside list-disc">
-                           {item}
-                        </li>
-                     ))}
-                  </ul>
+         <div className="font-mono text-black flex flex-col md:items-center p-16">
+            <div className="text-4xl mb-6 text-center">Skillset</div>
+            <div className="mx-auto max-w-2xl"> {/* Center the content and set a max-width */}
+               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-4 text-left">
+                  {skillCats.map((obj) => (
+                     <div key={obj.category}>
+                        <div className="text-lg">
+                           <h1 className="font-bold">{obj.category}</h1>
+                           <ul>
+                              {obj.list.map((item) => (
+                                 <li key={item} className="list-inside list-disc">
+                                    {item}
+                                 </li>
+                              ))}
+                           </ul>
+                        </div>
+                     </div>
+                  ))}
                </div>
             </div>
-         ))}
-      </div>
-   </div>
 
-   <div className="max-w-2xl mt-6 mb-10"> {/* Center the bonus section */}
-      <div className="flex justify-center">
-         <div className="w-full md:w-3/4 text-3xl">
-            <span className="font-bold underline decoration-brightred decoration-8">
-               Bonus
-            </span>
-            <div className="text-xl mt-4">
-               <p>
-                  <span className="font-bold">Spoken Languages:</span> French (native) and Japanese
-               </p> 
+            <div className="max-w-2xl mt-6 mb-10"> {/* Center the bonus section */}
+                  <div className="w-full text-3xl flex flex-wrap md:justify-center md:text-center">
+                     <span className="font-bold underline decoration-brightred decoration-8">
+                        Bonus
+                     </span>
+                     <div className="text-2xl mt-4">
+                        <p>
+                           <span className="font-bold">Spoken Languages:</span> French (native) and Japanese
+                        </p> 
+                     </div>
+                  </div>
             </div>
          </div>
-      </div>
-   </div>
-</div>
-
-</>
+      </>
 
 
 
