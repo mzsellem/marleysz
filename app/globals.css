@@ -18,3 +18,19 @@ body {
   height: 200px; /* Set the desired height */
   object-fit: cover; /* Maintain aspect ratio and cover container */
 }
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px; /* Set a fixed width for the arrow buttons */
+  padding: 5px; /* Adjust padding as needed */
+}
+
+.arrow-button.previous {
+  left: 0;
+}
+
+.arrow-button.next {
+  right: 0;
+}
