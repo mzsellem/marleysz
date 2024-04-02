@@ -2,13 +2,14 @@ import React from "react";
 
 export type ProjectProps = {
    image: string,
+   contract?: string,
    title: string,
    description: string,
    techLinks: { name: string, link: string }[],
    projectLink: string,
 }
 
-export default function Project({ image, title, description, techLinks, projectLink }: ProjectProps) {
+export default function Project({ image, contract, title, description, techLinks, projectLink }: ProjectProps) {
    return (
       <div className="flex flex-col items-center text-black">
          <div>{title}</div>
@@ -18,6 +19,9 @@ export default function Project({ image, title, description, techLinks, projectL
             </a>
          </div>
          <div className="flex m-6 text-sm text-center">{description}</div>
+         {contract !== undefined && ( // Conditional rendering of contract
+            <div className="flex m-6 text-sm text-center">{contract}</div>
+         )}
          <div className="flex flex-wrap items-center justify-center mb-4 -my-2 space-x-2">
             {techLinks.map((tech, index) => (
                <a
