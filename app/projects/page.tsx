@@ -4,14 +4,33 @@ import Project from "../components/project/project";
 import "../../public/login.png";
 import "../../public/lamadoro-login.png";
 import "../../public/soundify.png";
+import "../../public/sellem-sitters.png";
+import "../../public/justin-holding-piano.png"
 
 export default function Projects() {
    const projects = [
+      {
+         title: "Justin Han Portfolio",
+         description:
+            "Professional portfolio for a multitalented musician.",
+         image: "justin-holding-piano.png",
+         contract: "",
+         techLinks: [
+            { name: "Nextjs", link: "https://nextjs.org/" },
+            { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
+            { name: "Vercel", link: "https://vercel.com/" },
+            { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+            { name: "TypeSCript", link: "https://www.typescriptlang.org/docs/" },
+            { name: "Nodemailer", link: "https://nodemailer.com/about/" },
+         ],
+         projectLink: "https://justin-han.vercel.app/",
+      },
       {
          title: "AI Chatbot",
          description:
             "Empower your leadership potential with our cutting-edge leadership development app powered by OpenAI, tailored to enhance your skills, foster innovation, and guide you towards becoming a dynamic and effective leader.",
          image: "login.png",
+         contract: "* Contract Work. Access can be provided upon request.",
          techLinks: [
             { name: "Nextjs", link: "https://nextjs.org/" },
             { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
@@ -28,6 +47,7 @@ export default function Projects() {
          description:
             "Lamadoro, a user-friendly app, leverages the Pomodoro Technique to enhance your productivity by breaking work into manageable intervals, providing rejuvenating breaks, and inspiring you with motivational quotes, ultimately leading to increased productivity and reduced burnout.",
          image: "lamadoro-login.png",
+         contract: "",
          techLinks: [
             { name: "Express", link: "https://expressjs.com/" },
             { name: "Reactjs", link: "https://react.dev/" },
@@ -45,6 +65,7 @@ export default function Projects() {
       },
       { title: "Soundify", description: "Soundify is a music application that allows the user to have more control of their playlists increasing functionality and user experience. Soundify prioritizes user convenience by enabling a powerful search functionality allowing users to quickly add or delete songs to their playlists.",
       image: "soundify.png",
+      contract: "",
       techLinks: [
          { name: "Python", link: "https://www.python.org/" },
          { name: "Django", link: "https://www.djangoproject.com/" },
@@ -60,6 +81,7 @@ export default function Projects() {
    },
       { title: "Sellem Sitters", description: "The Cat Sitter app is a simple, to-do list-style application designed to help cat sitters manage their feline clientele.",
       image: "sellem-sitters.png",
+      contract: "",
       techLinks: [
          { name: "Express", link: "https://expressjs.com/" },
          { name: "Node.js", link: "https://nodejs.org/en" },
@@ -77,6 +99,7 @@ export default function Projects() {
    },
       { title: "Match The Flag", description: "This is a game of concentration. You have a limited number of guesses. Can you correctly match the pairs of flags? Let's find out!",
       image: "match-the-flag.png",
+      contract: "",
       techLinks: [
          { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
          { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
@@ -120,6 +143,7 @@ export default function Projects() {
                   <div className="w-full">
                      <Project
                         image={currentProject.image}
+                        contract={currentProject.contract}
                         title={currentProject.title}
                         description={currentProject.description}
                         techLinks={currentProject.techLinks}
