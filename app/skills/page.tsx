@@ -4,12 +4,12 @@ export default function Skills() {
    const skillCats = [
       {
          category: "Languages",
-         list: ["HTML", "CSS", "Python", "EJS", "JavaScript"],
+         list: ["TypeScript", "JavaScript", "Python", "EJS", "CSS", "HTML"],
       },
-      { category: "Databases", list: ["MongoDB", "PostgreSQL", "Supabase"] },
+      { category: "Databases", list: ["PostgreSQL", "MongoDB", "Supabase"] },
       {
          category: "Frameworks/Libraries",
-         list: ["Express.js", "Node.js", "React.js", "Django", "Mongoose"],
+         list: ["Next.js", "React.js","Express.js", "Node.js", "Django", "Mongoose"],
       },
       {
          category: "Auth",
@@ -17,19 +17,21 @@ export default function Skills() {
       },
       {
          category: "Concepts/Patterns",
-         list: ["REST API", "OOP", "Agile", "Scrum"],
+         list: ["REST API", "Functional Programming", "Agile", "Scrum"],
       },
       {
          category: "Other",
          list: [
+            "Android Studio",
+            "Headless UI",
+            "Epic",
             "Git/Github",
             "Trello",
             "Bootstrap",
             "JSON",
             "Tailwind CSS/UI",
             "Resend",
-            "Vercel",
-            "Vercel AI SDK",
+            "Vercel/AI SDK",
          ],
       },
    ];
