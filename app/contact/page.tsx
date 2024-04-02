@@ -14,7 +14,10 @@ export default function Contact() {
                </p>
             </div>
             <div className="flex justify-center pb-2 space-x-6">
-               <a href="https://github.com/mzsellem-GA">
+               <a 
+                  href="https://github.com/mzsellem-GA"
+                  className="mt-1"
+               >
                   <img
                      src="/github-mark.png"
                      alt="github logo"
