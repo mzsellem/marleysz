@@ -5,7 +5,6 @@ import Skills from "./skills/page";
 import Contact from "./contact/page";
 import About from "./about/page";
 import Intro from "./intro/page";
-import "../public/poppy2.png"
 
 export default function Home() {
 
