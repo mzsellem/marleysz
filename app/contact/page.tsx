@@ -5,7 +5,7 @@ export default function Contact() {
       <>
          <div className="flex flex-col w-3/4 p-6 font-mono text-black">
             <div className="flex flex-col justify-center mb-6 space-y-6">
-               <p className="flex justify-center text-5xl font-semibold">
+               <p className="flex justify-center text-3xl font-semibold md:text-5xl">
                   Let's Chat
                </p>
                <p className="flex justify-center text-xl font-fine">

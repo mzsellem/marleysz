@@ -12,7 +12,7 @@ export default function Projects() {
       {
          title: "Justin Han Portfolio",
          description:
-            "Professional portfolio for a multitalented musician.",
+            "Professional portfolio for a multitalented musician. Portfolio includes a biorgaphy, media, a contact form, and an events listing when available.",
          image: "justin-holding-piano.png",
          contract: "",
          techLinks: [

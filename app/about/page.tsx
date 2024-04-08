@@ -5,11 +5,11 @@ export default function About() {
    return (
       <>
          <div className="flex flex-col items-center justify-start w-3/4 h-full p-6 mx-auto font-mono text-black">
-            <div className="flex w-full sm:w-1/2 md:justify-center">
+            <div className="flex justify-center w-full sm:w-1/2 md:justify-center">
                <img
                   src="/marley.png"
                   alt="poppy in a field"
-                  className="w-1/2 h-auto border border-4 rounded-lg"
+                  className="w-full h-auto border-4 rounded-lg md:w-1/2"
                />
             </div>
             <div className="w-full mt-4 sm:w-3/4 text-start sm:text-center">

@@ -15,10 +15,10 @@ export default function Project({ image, contract, title, description, techLinks
          <div className="mb-3">{title}</div>
          <div>
             <a href={projectLink}>
-                  <img className="transition-transform border-4 rounded-lg project-image hover:scale-110 border-grey" src={image} alt={title} />
+                  <img className="mb-6 transition-transform border-4 rounded-lg project-image hover:scale-110 border-grey" src={image} alt={title} />
             </a>
          </div>
-         <div className="flex m-5 text-sm text-center">{description}</div>
+         <div className="flex justify-center text-sm text-center min-w-[720px] min-h-[80px]">{description}</div>
          {contract !== undefined && ( // Conditional rendering of contract
             <div className="flex mb-4 text-sm text-center m">{contract}</div>
          )}
