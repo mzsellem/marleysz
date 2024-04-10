@@ -34,3 +34,7 @@ body {
 .arrow-button.next {
   right: 0;
 }
+
+.y-space {
+  align-content: space-between;
+}

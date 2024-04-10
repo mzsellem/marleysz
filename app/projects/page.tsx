@@ -134,14 +134,14 @@ export default function Projects() {
                <div className="flex flex-col p-4 mt-4 space-x-2">
                      <div className="text-4xl text-black">Projects</div>
                </div>
-               <div className="relative">
+               <div>
                   <div className="flex flex-row items-center p-4">
                      <button
                         onClick={goToPreviousProject}
                         className="w-1/5 p-2 font-bold text-black md:w-1/6 hover:scale-150">
                         &larr;
                      </button>
-                     <div>
+                     <div className="border p-2 h-[580px] md:h-[460px] max-w-[800px] md:w-[700px]">
                         <Project
                               image={currentProject.image}
                               contract={currentProject.contract}
