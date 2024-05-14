@@ -17,21 +17,19 @@ export default function About() {
                   About Me
                </div>
                <p className="mb-4 sm:mb-6">
-                  As a detail-oriented third-culture kid with a diverse
-                  background in health sciences, I am eager to embark on a new
-                  professional journey in software development.
+               As a software engineer with a strong foundation in health 
+               sciences, I excel in delivering meticulous, user-centered
+               solutions. My dedication to client and user satisfaction
+               is rooted in my detailed-oriented approach and unwavering
+               commitment to excellence. 
                </p>
                <p className="mb-4 sm:mb-6">
-                  My passion for precision and problem-solving, honed through my
-                  experiences in health sciences, fuels my desire to contribute
-                  to the dynamic and rapidly evolving field of software
-                  development.
-               </p>
-               <p className="mb-4 sm:mb-6">
-                  I am committed to acquiring the necessary technical skills and
-                  knowledge to excel in this industry, and I am excited to apply
-                  my unique perspective and cross-cultural understanding to
-                  create innovative and user-centric solutions.
+                  Growing up as a third culture kid, I bring a unique, global
+                  perspective and adaptability, enabling me to thrive in 
+                  diverse, collaborative environments. I am eager to apply my
+                  multifaceted skills and experiences to create impactful and
+                  innovative software solutions that 
+                  meet and exceed user expectations.               
                </p>
                <p className="mb-4 sm:mb-6">
                   With an innate curiosity and a strong drive to learn, I am
