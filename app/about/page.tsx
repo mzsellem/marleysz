@@ -12,8 +12,8 @@ export default function About() {
                   className="w-full h-auto border-4 rounded-lg md:w-1/2"
                />
             </div>
-            <div className="w-full mt-4 sm:w-3/4 text-start sm:text-center">
-               <div className="mb-4 font-mono text-4xl md:text-center sm:text-4xl sm:mb-6">
+            <div className="w-full mt-6 sm:w-3/4 text-start sm:text-center p-2 h-[710px] md:h-[470px] max-w-[800px] md:w-[700px]">
+               <div className="mb-4 font-mono text-4xl md:text-center sm:text-4xl sm:mb-4">
                   About Me
                </div>
                <p className="mb-4 sm:mb-6">

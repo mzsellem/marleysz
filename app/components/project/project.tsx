@@ -20,7 +20,7 @@ export default function Project({ image, contract, title, description, techLinks
          </div>
          <div className="flex justify-center text-sm text-center">{description}</div>
          {contract !== undefined && ( // Conditional rendering of contract
-            <div className="flex mb-4 text-sm text-center">{contract}</div>
+            <div className="flex mt-3 mb-4 text-sm text-center">{contract}</div>
          )}
          <div className="flex flex-wrap items-center justify-center space-x-2">
             {techLinks.map((tech, index) => (

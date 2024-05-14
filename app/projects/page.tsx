@@ -141,7 +141,7 @@ export default function Projects() {
                         className="w-1/5 p-2 font-bold text-black md:w-1/6 hover:scale-150">
                         &larr;
                      </button>
-                     <div className="border p-2 h-[580px] md:h-[460px] max-w-[800px] md:w-[700px]">
+                     <div className="p-2 h-[710px] md:h-[470px] max-w-[800px] md:w-[700px]">
                         <Project
                               image={currentProject.image}
                               contract={currentProject.contract}
