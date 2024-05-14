@@ -41,7 +41,7 @@ export default function Skills() {
          <div className="flex flex-col p-16 font-mono text-black md:items-center">
             <div className="mb-6 text-4xl text-center">Skillset</div>
             <div className="max-w-2xl mx-auto"> {/* Center the content and set a max-width */}
-               <div className="grid grid-cols-1 text-left sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-4 p-2 h-[710px] md:h-[470px] max-w-[800px] md:w-[700px]">
+               <div className="grid grid-cols-1 text-left sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-4 p-2 md:h-[470px] max-w-[800px] md:w-[700px]">
                   {skillCats.map((obj) => (
                      <div key={obj.category}>
                         <div className="text-lg">
@@ -59,12 +59,12 @@ export default function Skills() {
                </div>
             </div>
 
-            <div className="max-w-2xl mt-6 mb-10"> {/* Center the bonus section */}
-                  <div className="flex flex-wrap w-full text-3xl text-left">
+            <div className="flex mt-16"> 
+                  <div className="text-2xl text-left">
                      <span className="font-bold underline decoration-brightred decoration-8">
                         Bonus
                      </span>
-                     <div className="mt-4 text-2xl">
+                     <div className="mt-4 text-xl">
                         <p>
                            <span className="font-bold">Spoken Languages:</span> French (native) and Japanese
                         </p> 
