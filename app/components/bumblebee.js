@@ -1,7 +1,7 @@
 // components/Bumblebee.js
 import React, { useEffect, useState } from 'react';
 
-const Bumblebee = ({ onHoverLink }) => {
+const Bumblebee = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
 
@@ -28,19 +28,6 @@ const Bumblebee = ({ onHoverLink }) => {
     return () => clearInterval(interval);
   }, [position]);
 
-  useEffect(() => {
-    const checkHover = () => {
-      const element = document.elementFromPoint(trailPosition.x, trailPosition.y);
-      if (element && element.tagName === 'A') {
-        onHoverLink(trailPosition.x, trailPosition.y);
-      }
-    };
-
-    const interval = setInterval(checkHover, 100); // Check for hover every 100ms
-
-    return () => clearInterval(interval);
-  }, [trailPosition, onHoverLink]);
-
   const beeStyle = {
     position: 'absolute',
     top: trailPosition.y,
@@ -48,7 +35,7 @@ const Bumblebee = ({ onHoverLink }) => {
     transition: 'top 0.1s, left 0.1s',
     width: '50px', // Adjust size as needed
     height: '50px',
-    backgroundImage: 'url("/beee.png")', // Correct path to your bee image
+    backgroundImage: 'url("/beee.png")', // Path to your bee image
     backgroundSize: 'cover',
     pointerEvents: 'none', // Ensure the bee doesn't interfere with cursor interactions
   };

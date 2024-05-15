@@ -5,11 +5,18 @@ import Skills from "./skills/page";
 import Contact from "./contact/page";
 import About from "./about/page";
 import Intro from "./intro/page";
-import Beee from "./components/bumblebee";
+import Bumblebee from "./components/bumblebee";
 import Pollen from "./components/pollen";
 
+// Define the type for a pollen item
+interface PollenItem {
+  id: number;
+  x: number;
+  y: number;
+}
+
 export default function Home() {
-  const [pollens, setPollens] = useState([]);
+  const [pollens, setPollens] = useState<PollenItem[]>([]);
   
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
@@ -27,7 +34,7 @@ export default function Home() {
   }
   };
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const newPollen = {
       id: Date.now(),
       x: event.clientX,
@@ -36,8 +43,8 @@ export default function Home() {
     setPollens([...pollens, newPollen]);
   };
 
-  const removePollen = (id) => {
-    setPollens(pollens.filter(pollen => pollen.id !== id));
+  const removePollen = (id: number) => {
+    setPollens((prevPollens) => prevPollens.filter(pollen => pollen.id !== id));
   };
 
 
@@ -56,7 +63,7 @@ export default function Home() {
               </div>
           </div>
         </div>
-        <Beee />
+        <Bumblebee />
         {pollens.map(pollen => (
           <Pollen key={pollen.id} x={pollen.x} y={pollen.y} onComplete={() => removePollen(pollen.id)} />
         ))}

@@ -25,9 +25,3 @@ const Pollen = ({ x, y, onComplete }) => {
 };
 
 export default Pollen;
-
-// Add the following CSS to your global styles (e.g., in globals.css)
-// @keyframes poof {
-//   0% { transform: scale(1); opacity: 1; }
-//   100% { transform: scale(2); opacity: 0; }
-// }
