@@ -1,4 +1,3 @@
-// components/Pollen.js
 import React, { useEffect } from 'react';
 
 const Pollen = ({ x, y, onComplete }) => {
@@ -11,11 +10,11 @@ const Pollen = ({ x, y, onComplete }) => {
     position: 'absolute',
     top: y,
     left: x,
-    width: '20px', // Adjust size as needed
-    height: '20px',
+    width: '30px', // Adjust size as needed
+    height: '30px',
     backgroundColor: 'yellow',
     borderRadius: '50%',
-    boxShadow: '0 0 10px 10px yellow',
+    boxShadow: '10px 10px 10px 10px yellow',
     opacity: 0.8,
     animation: 'poof 1s ease-out forwards',
     pointerEvents: 'none',

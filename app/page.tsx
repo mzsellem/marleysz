@@ -6,7 +6,7 @@ import Contact from "./contact/page";
 import About from "./about/page";
 import Intro from "./intro/page";
 import Bumblebee from "./components/bumblebee";
-import Pollen from "./components/pollen";
+// import Pollen from "./components/pollen";
 
 // Define the type for a pollen item
 interface PollenItem {
@@ -34,39 +34,40 @@ export default function Home() {
   }
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const newPollen = {
-      id: Date.now(),
-      x: event.clientX,
-      y: event.clientY,
-    };
-    setPollens([...pollens, newPollen]);
-  };
+  // const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  //   const newPollen = {
+  //     id: Date.now(),
+  //     x: event.clientX,
+  //     y: event.clientY,
+  //   };
+  //   setPollens([...pollens, newPollen]);
+  // };
 
-  const removePollen = (id: number) => {
-    setPollens((prevPollens) => prevPollens.filter(pollen => pollen.id !== id));
-  };
+  // const removePollen = (id: number) => {
+  //   setPollens((prevPollens) => prevPollens.filter(pollen => pollen.id !== id));
+  // };
 
 
   return (
     <>
-      <div onClick={handleClick}>
+      {/* <div onClick={handleClick}> */}
+      <div>
         <div className="sticky top-0 flex justify-center">
         <div className="flex justify-center">
           <div className="w-screen p-4 font-mono text-black bg-other">
               <div className="flex justify-center space-x-4 text-sm md:text-base">
-                <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Intro</button>
-                <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Projects</button>
-                <button onClick={() => scrollToSectionWithOffset(section3Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Skills</button>
-                <button onClick={() => scrollToSectionWithOffset(section4Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">About</button>
-                <button onClick={() => scrollToSectionWithOffset(section5Ref, 65)} className="hover:underline hover:decoration-brightred hover:decoration-8">Contact</button>
+                <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="glow-on-hover">Intro</button>
+                <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="glow-on-hover">Projects</button>
+                <button onClick={() => scrollToSectionWithOffset(section3Ref, 65)} className="glow-on-hover">Skills</button>
+                <button onClick={() => scrollToSectionWithOffset(section4Ref, 65)} className="glow-on-hover">About</button>
+                <button onClick={() => scrollToSectionWithOffset(section5Ref, 65)} className="glow-on-hover">Contact</button>
               </div>
           </div>
         </div>
         <Bumblebee />
-        {pollens.map(pollen => (
+        {/* {pollens.map(pollen => (
           <Pollen key={pollen.id} x={pollen.x} y={pollen.y} onComplete={() => removePollen(pollen.id)} />
-        ))}
+        ))} */}
         </div>
           <div>
               <div ref={section1Ref} className="h-screen">

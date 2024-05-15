@@ -39,14 +39,38 @@ body {
   align-content: space-between;
 }
 
-/* // Add the following CSS to your global styles (e.g., in globals.css) */
-@keyframes poof {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(2); opacity: 0; }
-}
-
 /* globals.css */
 @keyframes poof {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(2); opacity: 0; }
 }
+
+/* Add this to your global styles (e.g., in globals.css or another CSS file) */
+.glow-on-hover {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s;
+  color: black;
+}
+
+.glow-on-hover::after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  pointer-events: none; /* Ensure the pseudo-element does not interfere with interactions */
+  background-color: yellow;
+}
+
+.glow-on-hover:hover::after {
+  opacity: 0.4;
+  font-weight: 900;
+}
+
+
+
