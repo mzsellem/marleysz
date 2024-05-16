@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="flex justify-center pb-2 space-x-6">
                <a 
                   href="https://github.com/mzsellem-GA"
-                  className="mt-1"
+                  className="mt-1 glow-on-hover"
                >
                   <img
                      src="/github-mark.png"
@@ -27,7 +27,7 @@ export default function Contact() {
                </a>
                <a
                   href="https://www.linkedin.com/in/marley-sellem/"
-                  className="mt-2"
+                  className="mt-2 glow-on-hover"
                >
                   <img
                      src="/li-logo.png"
