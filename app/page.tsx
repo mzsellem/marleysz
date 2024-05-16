@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Projects from "./projects/page";
 import Skills from "./skills/page";
 import Contact from "./contact/page";
@@ -9,15 +9,14 @@ import Bumblebee from "./components/bumblebee";
 // import Pollen from "./components/pollen";
 
 // Define the type for a pollen item
-interface PollenItem {
-  id: number;
-  x: number;
-  y: number;
-}
+// interface PollenItem {
+//   id: number;
+//   x: number;
+//   y: number;
+// }
 
 export default function Home() {
-  const [pollens, setPollens] = useState<PollenItem[]>([]);
-  
+
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);

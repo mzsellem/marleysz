@@ -4,13 +4,12 @@ import Pollen from './pollen';
 const Bumblebee = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
-  const [pollens, setPollens] = useState([]);
+  const [pollenCloud, setPollenCloud] = useState([]);
 
-  // Define the bee dimensions (adjust these values as needed)
+  // Bee dimensions 
   const beeWidth = 50;
   const beeHeight = 50;
 
-  // Define the offset (adjust these values as needed)
   const offsetX = 20;
   const offsetY = 20;
 
@@ -33,13 +32,13 @@ const Bumblebee = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTrailPosition((prevPosition) => ({
-        x: prevPosition.x + (position.x - prevPosition.x) * 0.6, // Increased from 0.3 to 0.6
-        y: prevPosition.y + (position.y - prevPosition.y) * 0.6, // Increased from 0.3 to 0.6
+        x: prevPosition.x + (position.x - prevPosition.x) * 0.6, 
+        y: prevPosition.y + (position.y - prevPosition.y) * 0.6, 
       }));
 
       if (shouldCreatePollen.current) {
         // Adjust pollen creation to be from the bee's butt
-        setPollens((prevPollens) => [
+        setPollenCloud((prevPollens) => [
           ...prevPollens,
           {
             id: Date.now(),
@@ -49,7 +48,7 @@ const Bumblebee = () => {
         ]);
         shouldCreatePollen.current = false;
       }
-    }, 16); // Decreased from 25ms to 16ms (approximately 60 FPS)
+    }, 16); 
 
     return () => clearInterval(interval);
   }, [position, trailPosition]);
@@ -59,26 +58,26 @@ const Bumblebee = () => {
     top: trailPosition.y,
     left: trailPosition.x,
     transition: 'top 0.016s, left 0.016s', // Reduced transition duration for smoother movement
-    width: `${beeWidth}px`, // Adjust size as needed
+    width: `${beeWidth}px`,
     height: `${beeHeight}px`,
-    backgroundImage: 'url("/beee.png")', // Path to your bee image
+    backgroundImage: 'url("/beee.png")', 
     backgroundSize: 'cover',
     pointerEvents: 'none', // Ensure the bee doesn't interfere with cursor interactions
   };
 
   const removePollen = (id) => {
-    setPollens((prevPollens) => prevPollens.filter(pollen => pollen.id !== id));
+    setPollenCloud((prevPollens) => prevPollens.filter(pollenCloud => pollenCloud.id !== id));
   };
 
   return (
     <>
       <div style={beeStyle}></div>
-      {pollens.map(pollen => (
+      {pollenCloud.map(pollenCloud => (
         <Pollen
-          key={pollen.id}
-          x={pollen.x}
-          y={pollen.y}
-          onComplete={() => removePollen(pollen.id)}
+          key={pollenCloud.id}
+          x={pollenCloud.x}
+          y={pollenCloud.y}
+          onComplete={() => removePollen(pollenCloud.id)}
         />
       ))}
     </>
