@@ -10,8 +10,8 @@ const Pollen = ({ x, y, onComplete }) => {
     position: 'absolute',
     top: y,
     left: x,
-    width: '30px', // Adjust size as needed
-    height: '30px',
+    width: '27px', // Adjust size as needed
+    height: '27px',
     backgroundColor: 'yellow',
     borderRadius: '50%',
     boxShadow: '10px 10px 10px 10px yellow',
