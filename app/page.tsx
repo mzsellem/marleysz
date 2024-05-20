@@ -19,11 +19,11 @@ import Bumblebee from "./components/bumblebee";
 export default function Home() {
 
   const sectionRefs = [
-    Intro, useRef(null),
-    Projects, useRef(null),
-    Skills, useRef(null),
-    About, useRef(null),
-    Contact, useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
   ];
   const [activeLink, setActiveLink] = useState(null);
 
