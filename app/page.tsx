@@ -1,5 +1,6 @@
 'use client'
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { motion } from 'framer-motion';
 import Projects from "./projects/page";
 import Skills from "./skills/page";
 import Contact from "./contact/page";
@@ -22,6 +23,9 @@ export default function Home() {
   const section3Ref = useRef(null);
   const section4Ref = useRef(null);
   const section5Ref = useRef(null);
+  const navbarRef = useRef(null);
+  const [activeLink, setActiveLink] = useState(null); // State to track active link
+
 
   const scrollToSectionWithOffset = (ref: any, offset: any) => {
     if (ref.current) {
@@ -31,6 +35,27 @@ export default function Home() {
       behavior: "smooth",
     });
   }
+  };
+
+  const handleLinkClick = (ref: any, index: any, e: any) => {
+    console.log("ref", ref);
+    console.log("index", index);
+    scrollToSectionWithOffset(ref, 65);
+    setActiveLink(index);
+
+    // Remove neon effect from other links
+    const links = [navbarRef];
+    console.log("links", links)
+    links.forEach((linkRef, i) => {
+      console.log("linkRef", linkRef);
+      console.log("i", i);
+      if (i !== index) {
+        e.target.classList.remove('neon-link');
+      }
+    });
+    console.log("e.target", e.target)
+    // Apply neon effect to the clicked link
+    e.target.classList.add('neon-link');
   };
 
   // const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -53,13 +78,43 @@ export default function Home() {
       <div>
         <div className="sticky top-0 flex justify-center">
         <div className="flex justify-center">
-          <div className="w-screen p-4 font-mono text-black bg-other">
+          <div className="w-screen p-4 font-mono text-black bg-other" ref={navbarRef}>
               <div className="flex justify-center space-x-4 text-sm md:text-base">
-                <button onClick={() => scrollToSectionWithOffset(section1Ref, 65)} className="glow-on-hover">Intro</button>
-                <button onClick={() => scrollToSectionWithOffset(section2Ref, 65)} className="glow-on-hover">Projects</button>
-                <button onClick={() => scrollToSectionWithOffset(section3Ref, 65)} className="glow-on-hover">Skills</button>
-                <button onClick={() => scrollToSectionWithOffset(section4Ref, 65)} className="glow-on-hover">About</button>
-                <button onClick={() => scrollToSectionWithOffset(section5Ref, 65)} className="glow-on-hover">Contact</button>
+              <motion.button
+                onClick={(e) => handleLinkClick(section1Ref, 0, e)}
+                className={activeLink === 0 ? "neon-link outline" : ""}
+                ref={section1Ref}
+              >
+                <div>Intro</div>
+              </motion.button>
+              <motion.button
+                onClick={(e) => handleLinkClick(section2Ref, 1, e)}
+                className={activeLink === 1 ? "neon-link" : ""}
+                ref={section2Ref}
+              >
+                Projects
+              </motion.button>
+              <motion.button
+                onClick={(e) => handleLinkClick(section3Ref, 2, e)}
+                className={activeLink === 2 ? "neon-link" : ""}
+                ref={section3Ref}
+              >
+                Skills
+              </motion.button>
+              <motion.button
+                onClick={(e) => handleLinkClick(section4Ref, 3, e)}
+                className={activeLink === 3 ? "neon-link" : ""}
+                ref={section4Ref}
+              >
+                About
+              </motion.button>
+              <motion.button
+                onClick={(e) => handleLinkClick(section5Ref, 4, e)}
+                className={activeLink === 4 ? "neon-link" : ""}
+                ref={section5Ref}
+              >
+                Contact
+              </motion.button>
               </div>
           </div>
         </div>
