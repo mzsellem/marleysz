@@ -37,7 +37,7 @@ export default function Home() {
     }
   };
 
-  const handleLinkClick = (index:any, e:any) => {
+  const handleNavLinkClick = (index:any) => {
     scrollToSectionWithOffset(sectionRefs[index], 65);
     setActiveLink(index);
   };
@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       {/* <div onClick={handleClick}> */}
-      <Navbar activeLink={activeLink} />
+      <Navbar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
       <div>
         <div ref={sectionRefs[0]} id="intro" className="h-screen">
           <Intro />

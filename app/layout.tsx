@@ -1,6 +1,7 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import React, { ReactNode } from "react"
+import './globals.css';
+import { Inter } from 'next/font/google';
+import React, { ReactNode } from "react";
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,11 @@ export default function RootLayout({ children }: {children?: ReactNode}) {
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <footer className="font-bold text-center">&copy; 2024 Marleysz</footer>
+        <div className='flex justify-center p-2'>
+          <footer className="flex items-center justify-center font-bold">
+            <div className='flex justify-center'>&copy; 2024 Marleysz</div>
+          </footer>
+        </div>
       </body>
     </html>
   )
