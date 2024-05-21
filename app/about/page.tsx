@@ -4,15 +4,15 @@ import "../../public/marley.png";
 export default function About() {
    return (
       <>
-         <div className="flex flex-col items-center justify-start w-3/4 h-full p-6 mx-auto font-mono text-black">
-            <div className="flex justify-center w-full sm:w-1/2 md:justify-center">
+         <div className="flex flex-col items-center justify-start w-full h-full mx-auto mt-6 font-mono text-black">
+            <div className="flex justify-center w-3/4 sm:w-1/2 sm:justify-center">
                <img
                   src="/marley.png"
                   alt="poppy in a field"
-                  className="w-full h-auto border-4 rounded-lg md:w-1/2"
+                  className="w-full h-auto border-4 rounded-lg sm:w-1/2"
                />
             </div>
-            <div className="w-full mt-6 sm:w-3/4 text-start sm:text-center p-2 h-[710px] md:h-[470px] max-w-[800px] md:w-[700px]">
+            <div className="w-full mt-6 text-center sm:text-center h-[810px] sm:h-[405px] max-w-[800px] sm:w-[700px]">
                <div className="mb-4 font-mono text-4xl md:text-center sm:text-4xl sm:mb-4">
                   About Me
                </div>
