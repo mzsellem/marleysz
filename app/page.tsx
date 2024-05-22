@@ -16,7 +16,7 @@ export default function Home() {
     {title: "Skills", component: <Skills />},
     {title: "About Me", component: <About />},
     {title: "Let's Chat", component: <Contact />},
-  ]   
+  ]
   
   const sectionRefs = [
     useRef(null),

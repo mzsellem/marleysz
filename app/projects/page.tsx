@@ -135,10 +135,10 @@ export default function Projects() {
                   <div className="flex flex-row items-center">
                      <button
                         onClick={goToPreviousProject}
-                        className="w-1/5 p-2 font-bold text-black md:w-1/6 hover:scale-150">
+                        className="p-2 font-bold text-black sm:w-1/6 hover:scale-150">
                         &larr;
                      </button>
-                     <div className="p-2 h-[710px] md:h-[470px] max-w-[800px] md:w-[700px]">
+                     <div className="p-2 h-[710px] sm:h-[470px] max-w-[800px] sm:w-[700px]">
                         <Project
                               image={currentProject.image}
                               contract={currentProject.contract}
@@ -150,13 +150,13 @@ export default function Projects() {
                      </div>
                      <button
                               onClick={goToNextProject}
-                              className="w-1/5 p-2 font-bold text-black md:w-1/6 hover:scale-150"
+                              className="p-2 font-bold text-black sm:w-1/6 hover:scale-150"
                            >
                               &rarr;
                      </button>
                   </div>
                </div>
-               </div>
+            </div>
          </div>
       </>
    );
