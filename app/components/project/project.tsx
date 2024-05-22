@@ -18,7 +18,7 @@ export default function Project({ image, contract, title, description, techLinks
                   <img className="mb-6 transition-transform border-4 rounded-lg project-image hover:scale-110 border-grey" src={image} alt={title} />
             </a>
          </div>
-         <div className="flex justify-center text-sm text-center">{description}</div>
+         <div className="flex justify-center p-2 text-sm text-center sm:p-0">{description}</div>
          {contract !== undefined && ( // Conditional rendering of contract
             <div className="flex mt-3 mb-4 text-sm text-center">{contract}</div>
          )}
