@@ -45,6 +45,18 @@ export default function Home() {
   return (
     <>
       <Navbar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
+      <div className="w-full">
+          <video
+            className="fixed object-cover w-full h-full -z-10"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="wallpaper.mp4" type="video/mp4" />
+               Your browser does not support the video tag.
+          </video>
+      </div>
       <div ref={sectionRefs[0]} id="intro" className="h-screen">
         <Intro />
       </div>
