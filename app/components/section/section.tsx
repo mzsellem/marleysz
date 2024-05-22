@@ -11,7 +11,7 @@ export default function Section({title, component}: SectionProps) {
          <div>
             <div className="flex flex-col m-4 sm:items-center">
                <div className="flex flex-col items-center justify-center w-full p-4 bg-blue-400/50 sm:bg-blue-400/25 rounded-3xl sm:w-3/4">
-                  <h1 className="text-2xl">{title}</h1>
+                  <h1 className="mt-6 mb-2 font-mono text-4xl">{title}</h1>
                   <div>
                      {component} 
                   </div>
