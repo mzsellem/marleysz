@@ -3,12 +3,13 @@ import React from "react"
 export default function Intro() {
    return (
       <>
-         <div className="flex flex-col max-w-screen-md p-8 mx-auto font-mono text-black md:h-full rounded-3xl">
-            <div className="flex flex-col items-center justify-center m-2 text-center">
-               <h1 className="m-2 text-6xl underline font-extralight md:text-8xl md:mt-52 decoration-4 underline-offset-8">
-                  MARLEY SELLEM
+         <div className="flex flex-col mx-auto font-mono text-black sm:h-full">
+            <div className="flex flex-col items-center justify-center m-6 text-center sm:m-2">
+               <h1 className="m-2 text-6xl underline font-extralight sm:text-8xl sm:mt-52 decoration-4 underline-offset-8">
+                  <p>MARLEY</p> 
+                  <p>SELLEM</p>
                </h1>
-               <div className="w-screen mt-8 text-xl font-thin text-center md:mb-4 md:text-3xl">
+               <div className="w-screen mt-8 text-xl font-thin text-center sm:mb-4 sm:text-3xl">
                   FULL STACK SOFTWARE ENGINEER
                </div>
             </div>
