@@ -118,7 +118,7 @@ export default function Projects() {
 
    return (
       <>
-         <div className="flex justify-center w-full mx-auto font-mono">
+         <div className="flex justify-center w-full mx-auto mb-6 font-mono">
             <div className="flex flex-col text-center">
                <div>
                   <div className="flex flex-row items-center">
