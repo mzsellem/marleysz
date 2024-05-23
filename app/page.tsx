@@ -10,22 +10,16 @@ import About from "./about/page";
 import Contact from "./contact/page";
 
 export default function Home() {
-
-  const sections = [
-    {title: "Projects", component: <Projects />},
-    {title: "Skills", component: <Skills />},
-    {title: "About Me", component: <About />},
-    {title: "Let's Chat", component: <Contact />},
-  ]
-  
-  const sectionRefs = [
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-  ];
   const [activeLink, setActiveLink] = useState(null);
+  
+  const introRef = useRef(null);
+  
+  const sections = [
+    {title: "Projects", component: <Projects />, ref: useRef(null)},
+    {title: "Skills", component: <Skills />, ref: useRef(null)},
+    {title: "About Me", component: <About />, ref: useRef(null)},
+    {title: "Let's Chat", component: <Contact />, ref: useRef(null)},
+  ]
 
   const scrollToSectionWithOffset = (ref:any, offset:any) => {
     if (ref.current) {
@@ -37,8 +31,12 @@ export default function Home() {
     }
   };
 
-  const handleNavLinkClick = (index:any) => {
-    scrollToSectionWithOffset(sectionRefs[index], 65);
+  const handleNavLinkClick = (index: any) => {
+    if (index === 0) {
+      scrollToSectionWithOffset(introRef, 65);
+    } else {
+      scrollToSectionWithOffset(sections[index - 1].ref, 65);
+    }
     setActiveLink(index);
   };
 
@@ -57,13 +55,14 @@ export default function Home() {
                Your browser does not support the video tag.
           </video>
       </div>
-      <div ref={sectionRefs[0]} id="intro" className="h-screen">
+      <div ref={introRef} id="intro" className="h-screen">
         <Intro />
       </div>
-      {sections.map((section, index) => {
-        return(<Section key={index} title={section.title} component={section.component}/>
-        )})
-      }
+      {sections.map((section, index) => (
+        <div key={index} ref={section.ref} id={section.title.toLowerCase().replace(/ /g, "-")}>
+          <Section title={section.title} component={section.component} />
+        </div>
+      ))}
       <Bumblebee />
     </>
   )
