@@ -16,6 +16,8 @@ export default function Projects() {
          image: "justin-holding-piano.png",
          contract: "",
          techLinks: [
+            { name: "Nextjs", link: "https://nextjs.org/" },
+            { name: "Vercel", link: "https://vercel.com/" },
             { name: "TypeScript", link: "https://www.typescriptlang.org/docs/" },
             { name: "Nodemailer", link: "https://nodemailer.com/about/" },
          ],
@@ -28,10 +30,8 @@ export default function Projects() {
          image: "login.png",
          contract: "* Contract Work. Access can be provided upon request.",
          techLinks: [
-            { name: "Nextjs", link: "https://nextjs.org/" },
             { name: "Vite/Reactjs", link: "https://vitejs.dev/guide/" },
             { name: "Supabase", link: "https://supabase.com/" },
-            { name: "Vercel", link: "https://vercel.com/" },
             { name: "Vercel AI SDK", link: "https://sdk.vercel.ai/docs" },
             { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
             { name: "Tailwind UI", link: "https://tailwindui.com/" },
@@ -45,11 +45,14 @@ export default function Projects() {
          image: "lamadoro-login.png",
          contract: "",
          techLinks: [
+            { name: "Node.js", link: "https://nodejs.org/en" },
             { name: "Reactjs", link: "https://react.dev/" },
             {
                name: "React Bootstrap",
                link: "https://react-bootstrap.github.io/",
             },
+            { name: "Canva", link: "https://www.canva.com/" },
+            { name: "Bootstrap", link: "https://getbootstrap.com/" },
          ],
          projectLink: "https://lamadoro.onrender.com",
       },
@@ -73,7 +76,6 @@ export default function Projects() {
       contract: "",
       techLinks: [
          { name: "Express", link: "https://expressjs.com/" },
-         { name: "Node.js", link: "https://nodejs.org/en" },
          { name: "EJS", link: "https://www.npmjs.com/package/ejs" },
          { name: "MongoDB", link: "https://www.mongodb.com/" },
          { name: "Mongoose", link: "https://mongoosejs.com/" },
@@ -82,7 +84,6 @@ export default function Projects() {
             link: "https://www.passportjs.org/packages/passport-google-oauth2/",
          },
          { name: "Passport", link: "https://www.passportjs.org/docs/" },
-         { name: "Bootstrap", link: "https://getbootstrap.com/" },
       ],
       projectLink: "https://sellemsitters.fly.dev/",
    },
