@@ -15,7 +15,7 @@ const Navbar = ({ activeLink, handleNavLinkClick }) => {
               {links.map((link, index) => (
                 <li key={index}>
                   <button
-                    className={activeLink === index ? 'text-blue-500' : 'text-black'}
+                    className={activeLink === index ? 'foggy-highlight' : 'text-black'}
                     onClick={() => handleNavLinkClick(index)}
                   >
                     {link}
