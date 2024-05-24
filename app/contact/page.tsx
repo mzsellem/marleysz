@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
    return (
@@ -10,28 +11,32 @@ export default function Contact() {
                   marleysellem@gmail.com
                </p>
                <div className="flex justify-center pb-2 space-x-6">
-                  <a 
-                     href="https://github.com/mzsellem-GA"
-                     className="mt-1"
-                  >
-                     <img
-                        src="/github-mark.png"
-                        alt="github logo"
-                        width="40"
-                        height="40"
-                     />
-                  </a>
-                  <a
-                     href="https://www.linkedin.com/in/marley-sellem/"
-                     className="mt-2"
-                  >
-                     <img
-                        src="/li-logo.png"
-                        alt="linkedin logo"
-                        width="40"
-                        height="40"
-                     />
-                  </a>
+                  <motion.button whileTap={{ scale: 0.85 }}>
+                     <a 
+                        href="https://github.com/mzsellem-GA"
+                        className="mt-1"
+                     >
+                        <img
+                           src="/github-mark.png"
+                           alt="github logo"
+                           width="40"
+                           height="40"
+                        />
+                     </a>
+                  </motion.button>
+                  <motion.button whileTap={{ scale: 0.85 }}>
+                     <a
+                        href="https://www.linkedin.com/in/marley-sellem/"
+                        className="mt-2"
+                     >
+                        <img
+                           src="/li-logo.png"
+                           alt="linkedin logo"
+                           width="40"
+                           height="40"
+                        />
+                     </a>
+                  </motion.button>
                </div>
             </div>
          </div>
