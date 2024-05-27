@@ -39,7 +39,7 @@ export default function Skills() {
    return (
       <>
          <div className="flex flex-col p-16 font-mono text-black md:items-center">
-            <div className="mb-6 text-4xl text-center">Skillset</div>
+            {/* <div className="mb-6 text-4xl text-center">Skillset</div> */}
             <div className="max-w-2xl mx-auto"> {/* Center the content and set a max-width */}
                <div className="grid grid-cols-1 text-left sm:grid-cols-3 gap-x-2 gap-y-4 p-2 sm:h-[470px] max-w-[800px] sm:w-[700px]">
                   {skillCats.map((obj) => (
