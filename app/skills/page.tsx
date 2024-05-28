@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
+import "./skills.css";
 
 // Helper function to sanitize category names into valid HTML IDs
 const sanitizeId = (str: any) => str.replace(/[^a-zA-Z0-9-_]/g, '');
@@ -82,12 +83,12 @@ export default function Skills() {
   return (
     <div className="flex flex-col font-mono text-black md:items-center" ref={scope}>
       <div className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-1 text-left sm:grid-cols-3 gap-x-2 gap-y-4 p-2 sm:h-[470px] max-w-[800px] sm:w-[700px]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-1 p-2 sm:h-[470px] max-w-[800px] sm:w-[700px]">
           {skillCats.map((obj) => {
             const sanitizedId = sanitizeId(obj.category);
             return (
-              <div key={obj.category} id={sanitizedId}>
-                <div className="text-lg">
+              <div className="flex" key={obj.category} id={sanitizedId}>
+                <div className="flex flex-col text-sm honeycomb">
                   <h1 
                     className="font-bold cursor-pointer"
                     onClick={() => toggleCategory(obj.category)}
@@ -96,7 +97,7 @@ export default function Skills() {
                   </h1>
                   <ul style={{ overflow: 'hidden' }}>
                     {obj.list.map((item) => (
-                      <motion.li key={item} className="list-disc list-inside">
+                      <motion.li key={item} className="text-xs list-disc list-inside">
                         {item}
                       </motion.li>
                     ))}

@@ -1,0 +1,12 @@
+.honeycomb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
+    /* padding: 10px; */
+    position: relative;
+    background-color: #FFD700; /* Honeycomb color */
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  
