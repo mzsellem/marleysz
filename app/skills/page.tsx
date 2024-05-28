@@ -1,124 +1,124 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
+import { useAnimate, stagger, motion } from "framer-motion";
+
+// Helper function to sanitize category names into valid HTML IDs
+const sanitizeId = (str: any) => str.replace(/[^a-zA-Z0-9-_]/g, '');
 
 export default function Skills() {
-   const skillCats = [
-      {
-         category: "Languages",
-         list: ["TypeScript", "JavaScript", "Python", "EJS", "CSS", "HTML"],
-      },
-      { category: "Databases", list: ["PostgreSQL", "MongoDB", "Supabase"] },
-      {
-         category: "Frameworks/Libraries",
-         list: ["Next.js", "React.js","Express.js", "Node.js", "Django", "Mongoose"],
-      },
-      {
-         category: "Auth",
-         list: ["Google OAuth", "Passport.js", "Magic Link"],
-      },
-      {
-         category: "Concepts/Patterns",
-         list: ["REST API", "Functional Programming", "Agile", "Scrum"],
-      },
-      {
-         category: "Other",
-         list: [
-            "Android Studio",
-            "Headless UI",
-            "Epic",
-            "Git/Github",
-            "Trello",
-            "Bootstrap",
-            "JSON",
-            "Tailwind CSS/UI",
-            "Resend",
-            "Vercel/AI SDK",
-         ],
-      },
-   ];
+  const [openCategories, setOpenCategories] = useState({});
+  const [scope, animate] = useAnimate();
+  const skillCats = [
+    {
+      category: "Languages",
+      list: ["TypeScript", "JavaScript", "Python", "EJS", "CSS", "HTML"],
+    },
+    { category: "Databases", list: ["PostgreSQL", "MongoDB", "Supabase"] },
+    {
+      category: "Frameworks/Libraries",
+      list: ["Next.js", "React.js", "Express.js", "Node.js", "Django", "Mongoose"],
+    },
+    {
+      category: "Auth",
+      list: ["Google OAuth", "Passport.js", "Magic Link"],
+    },
+    {
+      category: "Concepts/Patterns",
+      list: ["REST API", "Functional Programming", "Agile", "Scrum"],
+    },
+    {
+      category: "Other",
+      list: [
+        "Android Studio",
+        "Headless UI",
+        "Epic",
+        "Git/Github",
+        "Trello",
+        "Bootstrap",
+        "JSON",
+        "Tailwind CSS/UI",
+        "Resend",
+        "Vercel/AI SDK",
+      ],
+    },
+  ];
 
-   return (
-      <>
-         <div className="flex flex-col p-16 font-mono text-black md:items-center">
-            <div className="mb-6 text-4xl text-center">Skillset</div>
-            <div className="max-w-2xl mx-auto"> {/* Center the content and set a max-width */}
-               <div className="grid grid-cols-1 text-left sm:grid-cols-3 gap-x-2 gap-y-4 p-2 sm:h-[470px] max-w-[800px] sm:w-[700px]">
-                  {skillCats.map((obj) => (
-                     <div key={obj.category}>
-                        <div className="text-lg">
-                           <h1 className="font-bold">{obj.category}</h1>
-                           <ul>
-                              {obj.list.map((item) => (
-                                 <li key={item} className="list-disc list-inside">
-                                    {item}
-                                 </li>
-                              ))}
-                           </ul>
-                        </div>
-                     </div>
-                  ))}
-               </div>
-            </div>
+  const toggleCategory = (category) => {
+    setOpenCategories((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
 
-            <div className="mt-16 mb-6"> 
-                  <div className="text-2xl text-left">
-                     <span className="font-bold underline decoration-brightred decoration-8">
-                        Bonus
-                     </span>
-                     <div className="mt-4">
-                        <p>
-                           <span className="text-xl font-bold">Languages:</span> <span className="text-lg">French (native) and Japanese</span>
-                        </p> 
-                     </div>
-                  </div>
-            </div>
-         </div>
-      </>
+  useEffect(() => {
+    skillCats.forEach((cat) => {
+      const isOpen = openCategories[cat.category];
+      const sanitizedId = sanitizeId(cat.category);
+      animate(
+        `#${sanitizedId} ul`,
+        {
+          height: isOpen ? 'auto' : 0,
+          opacity: isOpen ? 1 : 0,
+        },
+        {
+          type: "spring",
+          bounce: 0,
+          duration: 0.4,
+        }
+      );
+      animate(
+        `#${sanitizedId} li`,
+        isOpen
+          ? { opacity: 1, scale: 1, x: 0 }
+          : { opacity: 0, scale: 0.3, x: -50 },
+        {
+          duration: 0.2,
+          delay: isOpen ? stagger(0.1) : 0,
+        }
+      );
+    });
+  }, [openCategories]);
 
+  return (
+    <div className="flex flex-col font-mono text-black md:items-center" ref={scope}>
+      <div className="max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 text-left sm:grid-cols-3 gap-x-2 gap-y-4 p-2 sm:h-[470px] max-w-[800px] sm:w-[700px]">
+          {skillCats.map((obj) => {
+            const sanitizedId = sanitizeId(obj.category);
+            return (
+              <div key={obj.category} id={sanitizedId}>
+                <div className="text-lg">
+                  <h1 
+                    className="font-bold cursor-pointer"
+                    onClick={() => toggleCategory(obj.category)}
+                  >
+                    {obj.category}
+                  </h1>
+                  <ul style={{ overflow: 'hidden' }}>
+                    {obj.list.map((item) => (
+                      <motion.li key={item} className="list-disc list-inside">
+                        {item}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
-
-
-
-      // <>
-      //    <div className="flex flex-col w-3/4 h-full p-6 mx-auto font-mono text-black">
-      //       <div className="flex flex-col w-full p-4 sm:items-center">
-      //          <div className="mb-6 text-4xl">Skillset</div>
-      //          {/* Use flex and flex-wrap to create three rows */}
-      //          <div className="flex flex-wrap sm:justify-center sm:space-x-6">
-      //             {skillCats.map((obj) => (
-      //                <div key={obj.category} className="mb-4">
-      //                   <div className="text-lg">
-      //                      <h1 className="font-bold">{obj.category}</h1>
-      //                      <ul>
-      //                         {obj.list.map((item) => (
-      //                            <li
-      //                               key={item}
-      //                               className="list-disc list-inside"
-      //                            >
-      //                               {item}
-      //                            </li>
-      //                         ))}
-      //                      </ul>
-      //                   </div>
-      //                </div>
-      //             ))}
-      //          </div>
-
-      //          <div className="flex flex-col w-1/2 text-3xl md:text-start md:p-6">
-      //             <span className="mb-4 font-bold underline decoration-brightred decoration-8">
-      //                Bonus
-      //             </span>
-      //             <div className="text-xl">
-      //                <p className="md:text-start">
-      //                   {" "}
-      //                   <span className="font-bold">
-      //                      Spoken Languages:
-      //                   </span>{" "}
-      //                   French (native) and Japanese
-      //                </p>
-      //             </div>
-      //          </div>
-      //       </div>
-      //    </div>
-      // </>
-   );
+      <div className="mt-8 mb-6 sm:mt-16">
+        <div className="text-2xl text-left">
+          <span className="font-bold underline decoration-brightred decoration-8">
+            Bonus
+          </span>
+          <div className="mt-4">
+            <p>
+              <span className="text-xl font-bold">Languages:</span> <span className="text-lg">French (native) and Japanese</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
