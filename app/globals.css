@@ -85,8 +85,8 @@ body {
   left: 50%;
   width: 120%;
   height: 120%;
-  background: rgba(255, 255, 0, 0.6); /* Light yellow color with transparency */
-  filter: blur(8px); /* Adjust blur for foggy effect */
+  background: rgba(255, 220, 98, 1); /* Light yellow color with transparency */
+  filter: blur(16px); /* Adjust blur for foggy effect */
   z-index: -0.9;
   transform: translate(-50%, -50%);
   pointer-events: none; /* Ensure the highlight doesn't interfere with text interaction */
