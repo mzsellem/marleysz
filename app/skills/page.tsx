@@ -80,14 +80,14 @@ export default function Skills() {
   }, [openCategories]);
 
   return (
-    <div className="flex flex-col font-mono text-black sm:items-center" ref={scope}>
+    <div className="flex flex-col w-full font-mono text-black sm:items-center" ref={scope}>
       <div className="max-w-2xl mx-auto">
-        <div className="grid place-content-center grid-cols-1 sm:grid-cols-3 gap-y-2 sm:h-[470px] max-w-[800px] sm:w-[700px]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 sm:h-[470px] max-w-[800px] sm:w-[700px] gap-x-14">
           {skillCats.map((obj) => {
             const sanitizedId = sanitizeId(obj.category);
             return (
-              <div className="flex items-center justify-center" key={obj.category} id={sanitizedId}>
-                <div className="flex flex-col items-center justify-center text-sm bg-center bg-cover w-[214px] h-[214px] honeycomb" style={{ backgroundImage: "url('single-honeycomb.png')"}}>
+              <div className="flex flex-col items-center justify-center w-64 h-64 text-xs bg-center bg-cover aspect-w-1 aspect-h-1" style={{ backgroundImage: "url('honeycomb.png')", backgroundSize: "contain"}} key={obj.category} id={sanitizedId}>
+                <div className="flex flex-col items-center justify-center">
                   <h1 
                     className="font-bold cursor-pointer"
                     onClick={() => toggleCategory(obj.category)}
