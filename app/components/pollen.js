@@ -12,9 +12,9 @@ const Pollen = ({ x, y, onComplete }) => {
         left: x,
         width: '27px', // Adjust size as needed
         height: '27px',
-        backgroundColor: 'yellow',
+        backgroundColor: '#ffdc62d9',
         borderRadius: '50%',
-        boxShadow: '10px 10px 10px 10px yellow',
+        boxShadow: '10px 10px 10px 10px #ffdc62d9',
         opacity: 0.8,
         animation: 'poof 1s ease-out forwards',
         pointerEvents: 'none',
