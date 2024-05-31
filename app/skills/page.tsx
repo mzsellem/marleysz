@@ -81,12 +81,11 @@ export default function Skills() {
 
   return (
     <div className="flex flex-col w-full font-mono text-black sm:items-center" ref={scope}>
-      <div className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 sm:h-[470px] max-w-[800px] sm:w-[700px] gap-x-14">
+        <div className="grid grid-cols-1 sm:grid-cols-3 place-items-center sm:h-[470px] max-w-[800px] sm:w-[700px] gap-x-40">
           {skillCats.map((obj) => {
             const sanitizedId = sanitizeId(obj.category);
             return (
-              <div className="flex flex-col items-center justify-center w-64 h-64 text-xs bg-center bg-cover aspect-w-1 aspect-h-1" style={{ backgroundImage: "url('honeycomb.png')", backgroundSize: "contain"}} key={obj.category} id={sanitizedId}>
+              <div className="flex justify-center w-64 h-64 text-xs bg-center bg-no-repeat bg-contain" style={{ backgroundImage: "url('honeycomb.png')"}} key={obj.category} id={sanitizedId}>
                 <div className="flex flex-col items-center justify-center">
                   <h1 
                     className="font-bold cursor-pointer"
@@ -105,7 +104,6 @@ export default function Skills() {
               </div>
             );
           })}
-        </div>
       </div>
 
       <div className="mt-8 mb-6 sm:mt-16">
