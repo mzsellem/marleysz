@@ -107,7 +107,7 @@ export default function Skills() {
       </div>
 
       <div className="mt-8 mb-6 sm:mt-16">
-        <div className="text-2xl text-left">
+        <div className="text-2xl text-center">
           <span className="font-bold underline decoration-brightred decoration-8">
             Bonus
           </span>
