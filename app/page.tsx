@@ -43,9 +43,9 @@ export default function Home() {
   return (
     <>
       <Navbar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
-      <div className="w-full">
+      <div className="w-screen video-container">
           <video
-            className="fixed object-cover w-full h-full -z-10"
+            className="fixed object-cover w-full h-full"
             autoPlay
             loop
             muted
@@ -55,7 +55,7 @@ export default function Home() {
                Your browser does not support the video tag.
           </video>
       </div>
-      <div ref={introRef} id="intro" className="h-screen">
+      <div ref={introRef} id="intro" className="mb-[370px] sm:mb-40">
         <Intro />
       </div>
       {sections.map((section, index) => (
