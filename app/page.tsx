@@ -43,6 +43,7 @@ export default function Home() {
   return (
     <>
       <Navbar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
+      <Bumblebee />
       <div className="w-screen video-container">
           <video
             className="fixed object-cover w-full h-full"
@@ -63,7 +64,6 @@ export default function Home() {
           <Section title={section.title} component={section.component} />
         </div>
       ))}
-      <Bumblebee />
     </>
   )
 }

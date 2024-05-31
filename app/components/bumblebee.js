@@ -18,7 +18,15 @@ const Bumblebee = () => {
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      setPosition({ x: event.clientX + offsetX, y: event.clientY + offsetY });
+      // Calculate cursor position relative to the viewport
+      const xRelativeToViewport = event.clientX;
+      const yRelativeToViewport = event.clientY;
+  
+      // Adjust cursor position based on scroll position
+      const x = xRelativeToViewport + window.scrollX;
+      const y = yRelativeToViewport + window.scrollY;
+  
+      setPosition({ x: x + offsetX, y: y + offsetY });
       shouldCreatePollen.current = true;
     };
 
@@ -57,7 +65,7 @@ const Bumblebee = () => {
     position: 'absolute',
     top: trailPosition.y,
     left: trailPosition.x,
-    transition: 'top 0.016s, left 0.016s', // Reduced transition duration for smoother movement
+    transition: 'top 0.4s, ease out, left 0.4s ease out', 
     width: `${beeWidth}px`,
     height: `${beeHeight}px`,
     backgroundImage: 'url("/beee.png")', 
