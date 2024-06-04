@@ -73,7 +73,7 @@ export default function Home() {
                Your browser does not support the video tag.
           </video>
       </div>
-      <div ref={introRef} id="intro" className="mb-[370px] sm:mb-40">
+      <div ref={introRef} id="intro" className="intro">
         <Intro />
       </div>
       {sections.map((section, index) => (
