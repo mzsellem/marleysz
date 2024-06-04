@@ -5,7 +5,7 @@ export default function About() {
    return (
       <>
          <div className="flex flex-col items-center w-full h-full mt-2 font-mono text-black">
-            <div className="flex justify-center w-3/4 sm:w-1/2 sm:justify-center">
+            <div className="flex justify-center w-2/3 sm:w-1/2 sm:justify-center">
                <img
                   src="/marley.png"
                   alt="poppy in a field"
