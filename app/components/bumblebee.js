@@ -68,7 +68,7 @@ const Bumblebee = () => {
     transition: 'top 0.4s, ease out, left 0.4s ease out', 
     width: `${beeWidth}px`,
     height: `${beeHeight}px`,
-    backgroundImage: 'url("/beee.png")', 
+    backgroundImage: 'url("/bee.png")', 
     backgroundSize: 'cover',
     pointerEvents: 'none', // Ensure the bee doesn't interfere with cursor interactions
   };
