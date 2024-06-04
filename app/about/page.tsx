@@ -14,7 +14,7 @@ export default function About() {
             </div>
             <div className="w-full sm:mt-4 text-center sm:text-center sm:w-[700px]">
                <p className="p-6 mb-4 sm:p-0 sm:mb-6">
-               As a detail-oriented junior software engineer, I am dedicated to
+               As a detail-oriented software engineer, I am dedicated to
                crafting seamless user experiences that cater to diverse needs. 
                My multicultural background enriches my approach to problem-solving,
                allowing me to create inclusive and effective solutions. I am eager 
