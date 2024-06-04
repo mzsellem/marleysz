@@ -33,8 +33,6 @@ export default function Skills() {
         "Headless UI",
         "Epic",
         "Git/Github",
-        "Trello",
-        "Bootstrap",
         "JSON",
         "Tailwind CSS/UI",
         "Resend",
