@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Navbar from "./components/navbar";
 import Intro from "./intro/page";
 import Bumblebee from "./components/bumblebee";
@@ -11,6 +11,7 @@ import Contact from "./contact/page";
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
   
   const introRef = useRef(null);
   
@@ -40,10 +41,26 @@ export default function Home() {
     setActiveLink(index);
   };
 
+    // useEffect to set isDesktop based on window width
+    useEffect(() => {
+      const handleResize = () => {
+        setIsDesktop(window.innerWidth >= 1024);
+      };
+  
+      // Initial check
+      handleResize();
+  
+      // Add event listener
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup event listener
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
   return (
     <>
       <Navbar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
-      <Bumblebee />
+      {isDesktop && <Bumblebee />}
       <div className="w-screen video-container">
           <video
             className="fixed object-cover w-full h-full"
