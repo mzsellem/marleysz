@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Navbar from "./components/navbar/navbar";
 import Intro from "./intro/page";
-import Bumblebee from "./components/bumblebee";
+import Bumblebee from "./components/bumblebee/bumblebee";
 import Section from "./components/section/section";
 import Projects from "./projects/page";
 import Skills from "./skills/page";

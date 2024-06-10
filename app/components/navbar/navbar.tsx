@@ -2,7 +2,12 @@
 import React from "react";
 import "./navbar.css";
 
-const Navbar = ({ activeLinkIndex, handleNavLinkClick }) => {
+export type NavbarProps = {
+  activeLinkIndex: number | null,
+  handleNavLinkClick: (index: number) => void,
+}
+
+const Navbar = ({ activeLinkIndex, handleNavLinkClick }: NavbarProps) => {
   
   const links = ["Intro","Projects", "Skills", "About", "Contact"];
 

@@ -7,7 +7,7 @@ const Pollen = ({ x, y, onComplete }) => {
         return () => clearTimeout(timeout);
     }, [onComplete]);
 
-    const pollenStyle = {
+    const pollenStyle: React.CSSProperties = {
         position: 'absolute',
         top: y,
         left: x,

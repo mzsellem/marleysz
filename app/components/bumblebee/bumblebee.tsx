@@ -1,10 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Pollen from './pollen/pollen';
+import Pollen from '../pollen/pollen';
+
+export type PollenCloud = {
+  id: number,
+  x: number,
+  y: number,
+}
 
 const Bumblebee = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
-  const [pollenCloud, setPollenCloud] = useState([]);
+  const [pollenCloud, setPollenCloud] = useState<PollenCloud[]>([]);
 
   const beeWidth = 50;
   const beeHeight = 50;
@@ -15,7 +21,7 @@ const Bumblebee = () => {
   const shouldCreatePollen = useRef(false);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       // Calculate cursor position relative to the viewport
       const xRelativeToViewport = event.clientX;
       const yRelativeToViewport = event.clientY;
@@ -59,7 +65,7 @@ const Bumblebee = () => {
     return () => clearInterval(interval);
   }, [position, trailPosition]);
 
-  const beeStyle = {
+  const beeStyle: React.CSSProperties = {
     position: 'absolute',
     top: trailPosition.y,
     left: trailPosition.x,
@@ -71,7 +77,7 @@ const Bumblebee = () => {
     pointerEvents: 'none',
   };
 
-  const removePollen = (id) => {
+  const removePollen = (id: number) => {
     setPollenCloud((prevPollens) => prevPollens.filter(pollenCloud => pollenCloud.id !== id));
   };
 
