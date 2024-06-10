@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import "./pollen.css";
 
-const Pollen = ({ x, y, onComplete }) => {
+export type PollenProps = {
+    x: number,
+    y: number,
+    onComplete: () => void,
+}
+
+const Pollen = ({ x, y, onComplete }: PollenProps) => {
     useEffect(() => {
         const timeout = setTimeout(onComplete, 1000); // Duration of the pollen animation in milliseconds
         return () => clearTimeout(timeout);
