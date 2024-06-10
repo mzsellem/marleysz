@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef, useState, useEffect } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbar/navbar";
 import Intro from "./intro/page";
 import Bumblebee from "./components/bumblebee";
 import Section from "./components/section/section";
@@ -8,6 +8,7 @@ import Projects from "./projects/page";
 import Skills from "./skills/page";
 import About from "./about/page";
 import Contact from "./contact/page";
+import "./page.css";
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState(null);

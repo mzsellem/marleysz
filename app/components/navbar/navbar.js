@@ -1,5 +1,6 @@
 // Navbar.js
 import React from "react";
+import "./navbar.css";
 
 const Navbar = ({ activeLink, handleNavLinkClick }) => {
   

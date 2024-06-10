@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Pollen from './pollen';
+import Pollen from './pollen/pollen';
 
 const Bumblebee = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
