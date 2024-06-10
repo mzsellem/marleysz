@@ -6,14 +6,12 @@ const Bumblebee = () => {
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
   const [pollenCloud, setPollenCloud] = useState([]);
 
-  // Bee dimensions 
   const beeWidth = 50;
   const beeHeight = 50;
 
   const offsetX = 20;
   const offsetY = 20;
 
-  // A ref to track if pollen should be created
   const shouldCreatePollen = useRef(false);
 
   useEffect(() => {
@@ -70,7 +68,7 @@ const Bumblebee = () => {
     height: `${beeHeight}px`,
     backgroundImage: 'url("/geo-bee.png")', 
     backgroundSize: 'cover',
-    pointerEvents: 'none', // Ensure the bee doesn't interfere with cursor interactions
+    pointerEvents: 'none',
   };
 
   const removePollen = (id) => {

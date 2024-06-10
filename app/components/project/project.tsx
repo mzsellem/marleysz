@@ -20,7 +20,7 @@ export default function Project({ image, contract, title, description, techLinks
             </a>
          </div>
          <div className="flex justify-center p-2 text-sm text-center sm:p-0">{description}</div>
-         {contract !== undefined && ( // Conditional rendering of contract
+         {contract !== undefined && (
             <div className="flex mt-3 mb-4 text-sm text-center">{contract}</div>
          )}
          <div className="flex flex-wrap items-center justify-center space-x-2">

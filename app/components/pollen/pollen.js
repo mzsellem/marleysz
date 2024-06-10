@@ -11,7 +11,7 @@ const Pollen = ({ x, y, onComplete }) => {
         position: 'absolute',
         top: y,
         left: x,
-        width: '27px', // Adjust size as needed
+        width: '27px', 
         height: '27px',
         backgroundColor: '#ffdc62d9',
         borderRadius: '50%',

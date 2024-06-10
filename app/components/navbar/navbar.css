@@ -13,8 +13,8 @@
     left: 50%;
     width: 120%;
     height: 120%;
-    background: rgba(255, 220, 98, 1); /* Light yellow color with transparency */
-    filter: blur(16px); /* Adjust blur for foggy effect */
+    background: rgba(255, 220, 98, 1); 
+    filter: blur(16px); /* Blur for foggy effect */
     z-index: -0.9;
     transform: translate(-50%, -50%);
     pointer-events: none; /* Ensure the highlight doesn't interfere with text interaction */
@@ -27,8 +27,8 @@
     left: 50%;
     width: 120%;
     height: 120%;
-    background: rgba(255, 255, 0, 0.2); /* Additional layer for a more pronounced effect */
-    filter: blur(15px); /* Additional blur for more depth */
+    background: rgba(255, 255, 0, 0.2); 
+    filter: blur(15px); 
     z-index: -2;
     transform: translate(-50%, -50%);
     pointer-events: none;

@@ -42,19 +42,15 @@ export default function Home() {
     setActiveLink(index);
   };
 
-    // useEffect to set isDesktop based on window width
     useEffect(() => {
       const handleResize = () => {
         setIsDesktop(window.innerWidth >= 1024);
       };
   
-      // Initial check
       handleResize();
   
-      // Add event listener
       window.addEventListener('resize', handleResize);
   
-      // Cleanup event listener
       return () => window.removeEventListener('resize', handleResize);
     }, []);
 
