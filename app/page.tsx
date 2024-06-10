@@ -10,20 +10,25 @@ import About from "./about/page";
 import Contact from "./contact/page";
 import "./page.css";
 
+export type ScrollToSection = {
+  ref: React.RefObject<HTMLDivElement>,
+  offset: number,
+}
+
 export default function Home() {
-  const [activeLink, setActiveLink] = useState(null);
+  const [activeLinkIndex, setActiveLinkIndex] = useState<number | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
   
-  const introRef = useRef(null);
+  const introRef = useRef<HTMLDivElement | null>(null);
   
   const sections = [
-    {title: "Projects", component: <Projects />, ref: useRef(null)},
-    {title: "Skills", component: <Skills />, ref: useRef(null)},
-    {title: "About Me", component: <About />, ref: useRef(null)},
-    {title: "Let's Chat", component: <Contact />, ref: useRef(null)},
+    {title: "Projects", component: <Projects />, ref: useRef<HTMLDivElement | null>(null)},
+    {title: "Skills", component: <Skills />, ref: useRef<HTMLDivElement | null>(null)},
+    {title: "About Me", component: <About />, ref: useRef<HTMLDivElement | null>(null)},
+    {title: "Let's Chat", component: <Contact />, ref: useRef<HTMLDivElement | null>(null)},
   ]
 
-  const scrollToSectionWithOffset = (ref:any, offset:any) => {
+  const scrollToSectionWithOffset = ({ref, offset}: ScrollToSection) => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
       window.scrollTo({
@@ -33,13 +38,13 @@ export default function Home() {
     }
   };
 
-  const handleNavLinkClick = (index: any) => {
+  const handleNavLinkClick = (index: number) => {
     if (index === 0) {
-      scrollToSectionWithOffset(introRef, 65);
+      scrollToSectionWithOffset({ref: introRef, offset: 65});
     } else {
-      scrollToSectionWithOffset(sections[index - 1].ref, 65);
+      scrollToSectionWithOffset({ref: sections[index - 1].ref, offset: 65});
     }
-    setActiveLink(index);
+    setActiveLinkIndex(index);
   };
 
     useEffect(() => {
@@ -56,7 +61,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
+      <Navbar activeLinkIndex={activeLinkIndex} handleNavLinkClick={handleNavLinkClick} />
       {isDesktop && <Bumblebee />}
       <div className="w-screen video-container">
           <video

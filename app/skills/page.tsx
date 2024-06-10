@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
 
 // Helper function to sanitize category names into valid HTML IDs
-const sanitizeId = (str: any) => str.replace(/[^a-zA-Z0-9-_]/g, '');
+const sanitizeId = (str: string) => str.replace(/[^a-zA-Z0-9-_]/g, '');
 
 export default function Skills() {
   const [openCategories, setOpenCategories] = useState({});
@@ -41,7 +41,7 @@ export default function Skills() {
     },
   ];
 
-  const toggleCategory = (category) => {
+  const toggleCategory = (category: string) => {
     setOpenCategories((prev) => ({
       ...prev,
       [category]: !prev[category],

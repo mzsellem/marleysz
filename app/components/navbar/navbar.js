@@ -2,7 +2,7 @@
 import React from "react";
 import "./navbar.css";
 
-const Navbar = ({ activeLink, handleNavLinkClick }) => {
+const Navbar = ({ activeLinkIndex, handleNavLinkClick }) => {
   
   const links = ["Intro","Projects", "Skills", "About", "Contact"];
 
@@ -16,7 +16,7 @@ const Navbar = ({ activeLink, handleNavLinkClick }) => {
               {links.map((link, index) => (
                 <li key={index}>
                   <button
-                    className={activeLink === index ? 'foggy-highlight' : 'text-black'}
+                    className={activeLinkIndex === index ? 'foggy-highlight' : 'text-black'}
                     onClick={() => handleNavLinkClick(index)}
                   >
                     {link}
