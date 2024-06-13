@@ -17,7 +17,7 @@ export default function Skills() {
     { category: "Databases", list: ["PostgreSQL", "MongoDB", "Supabase"] },
     {
       category: "Frameworks/Libraries",
-      list: ["Next.js", "React.js", "Express.js", "Node.js", "Django", "Mongoose"],
+      list: ["Next.js", "React.js", "Express.js", "Node.js", "Django", "Mongoose", "Framer Motion"],
     },
     {
       category: "Auth",
