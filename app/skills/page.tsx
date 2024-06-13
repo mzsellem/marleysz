@@ -100,7 +100,7 @@ export default function Skills() {
                     ))}
                   </ul>
                 </div>
-                {index % 2 === 0 && <div style={{rotate: `${index * 80}deg`}}><AnimatedBumblebee /></div>}
+                {index % 2 === 0 && <div className="absolute" style={{rotate: `${index * 80}deg`}}><AnimatedBumblebee /></div>}
               </div>
             );
           })}
