@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import { motion } from "framer-motion";
+import AnimatedBumblebee from "../components/animated-bumblebee/animated-bumblebee";
 
 export default function Contact() {
   return (
@@ -9,6 +10,9 @@ export default function Contact() {
         <p className="flex justify-center m-4 text-xl font-fine">
           marleysellem@gmail.com
         </p>
+        <div className="hidden sm:-translate-y-32 sm:-translate-x-48 sm:justify-end sm:flex">
+          <AnimatedBumblebee />
+        </div>
         <div className="flex justify-center pb-2 space-x-6">
           <motion.a 
             whileTap={{ scale: 0.85 }}

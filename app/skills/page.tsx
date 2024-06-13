@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
+import AnimatedBumblebee from "../components/animated-bumblebee/animated-bumblebee";
 
 // Helper function to sanitize category names into valid HTML IDs
 const sanitizeId = (str: string) => str.replace(/[^a-zA-Z0-9-_]/g, '');
@@ -80,7 +81,7 @@ export default function Skills() {
   return (
     <div className="flex flex-col w-full font-mono text-black sm:items-center" ref={scope}>
         <div className="grid grid-cols-1 sm:grid-cols-3 place-items-center sm:h-[470px] max-w-[800px] sm:w-[700px] gap-x-40">
-          {skillCats.map((obj) => {
+          {skillCats.map((obj, index) => {
             const sanitizedId = sanitizeId(obj.category);
             return (
               <div className="flex justify-center w-64 h-64 text-xs bg-center bg-no-repeat bg-contain" style={{ backgroundImage: "url('honeycomb.png')"}} key={obj.category} id={sanitizedId}>
@@ -99,6 +100,7 @@ export default function Skills() {
                     ))}
                   </ul>
                 </div>
+                {index % 2 === 0 && <AnimatedBumblebee />}
               </div>
             );
           })}
