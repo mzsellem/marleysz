@@ -69,7 +69,6 @@ const Bumblebee = () => {
     position: 'absolute',
     top: trailPosition.y,
     left: trailPosition.x,
-    transition: 'top 0.4s, ease out, left 0.4s ease out', 
     width: `${beeWidth}px`,
     height: `${beeHeight}px`,
     backgroundImage: 'url("/geo-bee.png")', 
