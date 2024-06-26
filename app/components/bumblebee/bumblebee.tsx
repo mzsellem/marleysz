@@ -18,20 +18,14 @@ const Bumblebee = () => {
   const offsetX = 20;
   const offsetY = 20;
 
-  const shouldCreatePollen = useRef(false);
+  const lastMousePosition = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      // Calculate cursor position relative to the viewport
-      const xRelativeToViewport = event.clientX;
-      const yRelativeToViewport = event.clientY;
+      const x = event.clientX + window.scrollX;
+      const y = event.clientY + window.scrollY;
   
-      // Adjust cursor position based on scroll position
-      const x = xRelativeToViewport + window.scrollX;
-      const y = yRelativeToViewport + window.scrollY;
-  
-      setPosition({ x: x + offsetX, y: y + offsetY });
-      shouldCreatePollen.current = true;
+      lastMousePosition.current = { x: x + offsetX, y: y + offsetY };
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -42,28 +36,32 @@ const Bumblebee = () => {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTrailPosition((prevPosition) => ({
-        x: prevPosition.x + (position.x - prevPosition.x) * 0.6, 
-        y: prevPosition.y + (position.y - prevPosition.y) * 0.6, 
-      }));
+    let animationFrameId: number;
 
-      if (shouldCreatePollen.current) {
-        // Adjust pollen creation to be from the bee's butt
+    const animate = () => {
+      setTrailPosition((prevPosition) => {
+        const newX = prevPosition.x + (lastMousePosition.current.x - prevPosition.x) * 1.5;
+        const newY = prevPosition.y + (lastMousePosition.current.y - prevPosition.y) * 1.5;
+        
         setPollenCloud((prevPollens) => [
           ...prevPollens,
           {
             id: Date.now(),
-            x: trailPosition.x + beeWidth / 2,
-            y: trailPosition.y + beeHeight,
+            x: newX + beeWidth / 2,
+            y: newY + beeHeight,
           },
         ]);
-        shouldCreatePollen.current = false;
-      }
-    }, 16); 
 
-    return () => clearInterval(interval);
-  }, [position, trailPosition]);
+        return { x: newX, y: newY };
+      });
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   const beeStyle: React.CSSProperties = {
     position: 'absolute',
