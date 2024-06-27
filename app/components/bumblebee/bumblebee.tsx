@@ -8,7 +8,6 @@ export type PollenCloud = {
 }
 
 const Bumblebee = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
   const [pollenCloud, setPollenCloud] = useState<PollenCloud[]>([]);
 
