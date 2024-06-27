@@ -65,7 +65,7 @@ export default function Home() {
       {isDesktop && <Bumblebee />}
       <div className="w-screen video-container">
           <video
-            className="fixed object-cover w-full h-full"
+            className="fixed object-cover w-full h-full blurred-video"
             autoPlay
             loop
             muted
