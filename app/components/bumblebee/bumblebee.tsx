@@ -10,7 +10,8 @@ export type PollenCloud = {
 const Bumblebee = () => {
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
   const [pollenCloud, setPollenCloud] = useState<PollenCloud[]>([]);
-  const [lastPollenTime, setLastPollenTime] = useState<number>(Date.now());
+  const lastPollenTime = useRef<number>(Date.now());
+  const pollenIdCounter = useRef(0);  // Use a ref to keep track of unique IDs
 
   const beeWidth = 50;
   const beeHeight = 50;
@@ -35,6 +36,7 @@ const Bumblebee = () => {
     };
   }, []);
 
+  //Animate the bee's movement and create pollen
   useEffect(() => {
     let animationFrameId: number;
 
@@ -46,19 +48,20 @@ const Bumblebee = () => {
         // Clamp the new positions within the viewport boundaries
         const clampedX = Math.min(Math.max(newX, 0), window.innerWidth - beeWidth);
         const clampedY = Math.min(Math.max(newY, 0), window.innerHeight - beeHeight);
-
+        
+        // Check the time to create a new pollen
         const currentTime = Date.now();
-        if (currentTime - lastPollenTime >= 1) {
+        if (currentTime - lastPollenTime.current >= 100) {
           setPollenCloud((prevPollens) => [
             ...prevPollens,
             {
-              id: currentTime,
+              id: pollenIdCounter.current++,  // Increment the counter for a unique ID
               x: clampedX + beeWidth / 2,
               y: clampedY + beeHeight,
             },
           ]);
-          setLastPollenTime(currentTime);
-        }
+          lastPollenTime.current = currentTime;
+        } 
 
         return { x: clampedX, y: clampedY };
       });
@@ -69,7 +72,7 @@ const Bumblebee = () => {
     animate();
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [lastPollenTime]);
+  }, []); // Empty dependency array to run only once
 
   const beeStyle: React.CSSProperties = {
     position: 'absolute',
