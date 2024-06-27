@@ -42,16 +42,20 @@ const Bumblebee = () => {
         const newX = prevPosition.x + (lastMousePosition.current.x - prevPosition.x) * 1.5;
         const newY = prevPosition.y + (lastMousePosition.current.y - prevPosition.y) * 1.5;
         
+        // Clamp the new positions within the viewport boundaries
+        const clampedX = Math.min(Math.max(newX, 0), window.innerWidth - beeWidth);
+        const clampedY = Math.min(Math.max(newY, 0), window.innerHeight - beeHeight);
+
         setPollenCloud((prevPollens) => [
           ...prevPollens,
           {
             id: Date.now(),
-            x: newX + beeWidth / 2,
-            y: newY + beeHeight,
+            x: clampedX + beeWidth / 2,
+            y: clampedY + beeHeight,
           },
         ]);
 
-        return { x: newX, y: newY };
+        return { x: clampedX, y: clampedY };
       });
 
       animationFrameId = requestAnimationFrame(animate);
