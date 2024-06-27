@@ -10,6 +10,7 @@ export type PollenCloud = {
 const Bumblebee = () => {
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
   const [pollenCloud, setPollenCloud] = useState<PollenCloud[]>([]);
+  const [lastPollenTime, setLastPollenTime] = useState<number>(Date.now());
 
   const beeWidth = 50;
   const beeHeight = 50;
@@ -46,14 +47,18 @@ const Bumblebee = () => {
         const clampedX = Math.min(Math.max(newX, 0), window.innerWidth - beeWidth);
         const clampedY = Math.min(Math.max(newY, 0), window.innerHeight - beeHeight);
 
-        setPollenCloud((prevPollens) => [
-          ...prevPollens,
-          {
-            id: Date.now(),
-            x: clampedX + beeWidth / 2,
-            y: clampedY + beeHeight,
-          },
-        ]);
+        const currentTime = Date.now();
+        if (currentTime - lastPollenTime >= 1) {
+          setPollenCloud((prevPollens) => [
+            ...prevPollens,
+            {
+              id: currentTime,
+              x: clampedX + beeWidth / 2,
+              y: clampedY + beeHeight,
+            },
+          ]);
+          setLastPollenTime(currentTime);
+        }
 
         return { x: clampedX, y: clampedY };
       });
@@ -64,7 +69,7 @@ const Bumblebee = () => {
     animate();
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, []);
+  }, [lastPollenTime]);
 
   const beeStyle: React.CSSProperties = {
     position: 'absolute',

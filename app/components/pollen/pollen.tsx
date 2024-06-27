@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import "./pollen.css";
 
 export type PollenProps = {
+    key: number,
     x: number,
     y: number,
     onComplete: () => void,
 }
 
-const Pollen = ({ x, y, onComplete }: PollenProps) => {
+const Pollen = ({ x, y, onComplete, key }: PollenProps) => {
     useEffect(() => {
         const timeout = setTimeout(onComplete, 1000); // Duration of the pollen animation in milliseconds
         return () => clearTimeout(timeout);
@@ -27,7 +28,7 @@ const Pollen = ({ x, y, onComplete }: PollenProps) => {
         pointerEvents: 'none',
     };
 
-    return <div style={pollenStyle}></div>;
+    return <div key={key} style={pollenStyle}></div>;
 };
 
 export default Pollen;
