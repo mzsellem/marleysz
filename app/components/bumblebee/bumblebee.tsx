@@ -46,7 +46,9 @@ const Bumblebee = () => {
         const newY = prevPosition.y + (lastMousePosition.current.y - prevPosition.y) * 1.5;
         
         // Clamp the new positions within the viewport boundaries
-        const clampedX = Math.min(Math.max(newX, 0), window.innerWidth - beeWidth);
+        const clampedX = Math.min(Math.max(newX, 0), document.body.scrollWidth - beeWidth);
+        //get height of largest div and switch out window.innerHeight with it
+        const clampedY = Math.min(Math.max(newY, 0), document.body.scrollHeight - beeHeight);
         
         // Check the time to create a new pollen
         const currentTime = Date.now();
@@ -56,13 +58,13 @@ const Bumblebee = () => {
             {
               id: pollenIdCounter.current++,  // Increment the counter for a unique ID
               x: clampedX + beeWidth / 2,
-              y: newY + beeHeight,
+              y: clampedY + beeHeight,
             },
           ]);
           lastPollenTime.current = currentTime;
         } 
 
-        return { x: clampedX, y: newY };
+        return { x: clampedX, y: clampedY };
       });
 
       animationFrameId = requestAnimationFrame(animate);
