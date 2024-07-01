@@ -12,6 +12,10 @@ const Bumblebee = () => {
   const [pollenCloud, setPollenCloud] = useState<PollenCloud[]>([]);
   const lastPollenTime = useRef<number>(Date.now());
   const pollenIdCounter = useRef(0);  // Use a ref to keep track of unique IDs
+  const pollenIndex = useRef(0); // Keep track of the current pollen index for recycling
+
+  const maxPollenCount = 5; // Maximum number of pollen divs to be created
+
 
   const beeWidth = 50;
   const beeHeight = 50;
@@ -53,14 +57,28 @@ const Bumblebee = () => {
         // Check the time to create a new pollen
         const currentTime = Date.now();
         if (currentTime - lastPollenTime.current >= 100) {
-          setPollenCloud((prevPollens) => [
-            ...prevPollens,
-            {
-              id: pollenIdCounter.current++,  // Increment the counter for a unique ID
-              x: clampedX + beeWidth / 2,
-              y: clampedY + beeHeight,
-            },
-          ]);
+          setPollenCloud((prevPollens) => {
+            const newPollens = [...prevPollens];
+
+            // Check if we need to add a new pollen or recycle an existing one
+            if (newPollens.length < maxPollenCount) {
+              newPollens.push({
+                id: pollenIdCounter.current++,  // Increment the counter for a unique ID
+                x: clampedX + beeWidth / 2,
+                y: clampedY + beeHeight,
+              });
+            } else {
+              // Recycle an existing pollen
+              newPollens[pollenIndex.current] = {
+                ...newPollens[pollenIndex.current],
+                x: clampedX + beeWidth / 2,
+                y: clampedY + beeHeight,
+              };
+              pollenIndex.current = (pollenIndex.current + 1) % maxPollenCount;
+            }
+
+            return newPollens;
+          });
           lastPollenTime.current = currentTime;
         } 
 
