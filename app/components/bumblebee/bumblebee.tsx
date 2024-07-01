@@ -86,10 +86,6 @@ const Bumblebee = () => {
     pointerEvents: 'none',
   };
 
-  const removePollen = (id: number) => {
-    setPollenCloud((prevPollens) => prevPollens.filter(pollenCloud => pollenCloud.id !== id));
-  };
-
   return (
     <>
       <div style={beeStyle}></div>
@@ -98,7 +94,6 @@ const Bumblebee = () => {
           key={pollenCloud.id}
           x={pollenCloud.x}
           y={pollenCloud.y}
-          onComplete={() => removePollen(pollenCloud.id)}
         />
       ))}
     </>
